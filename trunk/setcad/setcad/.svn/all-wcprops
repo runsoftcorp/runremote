@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ultravnc/!svn/ver/12/trunk/setcad/setcad
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/setcad/setcad/stdafx.h
+END
+setcad.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/setcad/setcad/setcad.cpp
+END
+setcad.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/setcad/setcad/setcad.vcxproj.filters
+END
+setcad.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/setcad/setcad/setcad.vcproj
+END
+setcadv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/setcad/setcad/setcadv11.vcxproj
+END
+setcadv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/setcad/setcad/setcadv12.vcxproj
+END
+targetver.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/setcad/setcad/targetver.h
+END
+stdafx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/setcad/setcad/stdafx.cpp
+END
+setcad.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/12/trunk/setcad/setcad/setcad.vcxproj
+END

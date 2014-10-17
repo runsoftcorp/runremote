@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/win
+END
+jpeg.def
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/win/jpeg.def
+END
+jconfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/win/jconfig.h
+END
+Makerules
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/win/Makerules
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/win/config.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/win/Makefile
+END
+jsimdcfg.inc
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/win/jsimdcfg.inc
+END

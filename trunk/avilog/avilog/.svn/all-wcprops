@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/stdafx.h
+END
+avilog.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/avilog.vcxproj.filters
+END
+avilog_VS2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/avilog_VS2005.vcproj
+END
+avilog.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/avilog.vcproj
+END
+avilogv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/avilogv11.vcxproj
+END
+avilogv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/avilogv12.vcxproj
+END
+AVIGenerator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/AVIGenerator.cpp
+END
+stdafx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/stdafx.cpp
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/ReadMe.txt
+END
+avilog.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/avilog.vcxproj
+END
+AVIGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/avilog/avilog/AVIGenerator.h
+END

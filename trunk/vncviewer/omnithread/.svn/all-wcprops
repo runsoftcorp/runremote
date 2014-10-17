@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread
+END
+omnithread.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/omnithread.dsp
+END
+omnithread.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/omnithread.h
+END
+nt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/nt.cpp
+END
+omnithread.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/omnithread.vcxproj
+END
+nt.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/nt.h
+END
+omnithread.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/omnithread.vcproj
+END
+omnithreadv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/omnithreadv11.vcxproj
+END
+omnithreadvs2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/omnithreadvs2005.vcproj
+END
+omnithreadv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/omnithreadv12.vcxproj
+END
+build-bcc32.bat
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/omnithread/build-bcc32.bat
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/13/trunk/translations/server/english
+END
+english.sln
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/13/trunk/translations/server/english/english.sln
+END
+winvnc.rc
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/13/trunk/translations/server/english/winvnc.rc
+END
+english.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ultravnc/!svn/ver/4/trunk/translations/server/english/english.vcproj
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/translations/server/english/resource.h
+END
+winvnc_ru.rc
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/translations/server/english/winvnc_ru.rc
+END

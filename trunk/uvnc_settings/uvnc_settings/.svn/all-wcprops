@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/12/trunk/uvnc_settings/uvnc_settings
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/stdafx.h
+END
+small.ico
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/small.ico
+END
+capture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/capture.cpp
+END
+vncOSVersion.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/vncOSVersion.h
+END
+uvnc_settings.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ultravnc/!svn/ver/12/trunk/uvnc_settings/uvnc_settings/uvnc_settings.vcxproj
+END
+createsfx2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/createsfx2.cpp
+END
+createsfx3.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/createsfx3.cpp
+END
+dsmplugin.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/dsmplugin.h
+END
+firewall.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/firewall.h
+END
+uvnc_settings.rc
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/uvnc_settings.rc
+END
+inifile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/inifile.cpp
+END
+videodrivercheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/videodrivercheck.cpp
+END
+log.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/log.cpp
+END
+upnp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/upnp.cpp
+END
+uvnc_settings.ico
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/uvnc_settings.ico
+END
+vncsetauth.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/vncsetauth.cpp
+END
+filetransfer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/filetransfer.cpp
+END
+settings.ico
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/settings.ico
+END
+stdafx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/stdafx.cpp
+END
+misc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/misc.cpp
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/resource.h
+END
+vncOSVersion.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/vncOSVersion.cpp
+END
+uvnc_settings.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/uvnc_settings.h
+END
+dsmplugin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/dsmplugin.cpp
+END
+firewall.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/firewall.cpp
+END
+security.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/security.cpp
+END
+connections.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/connections.cpp
+END
+inifile.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/inifile.h
+END
+createsfx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/createsfx.cpp
+END
+log.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/log.h
+END
+upnp.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/upnp.h
+END
+uvnc_settings.vcproj.PIV.rudi.user
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/uvnc_settings.vcproj.PIV.rudi.user
+END
+network.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/network.cpp
+END
+vncsetauth.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/vncsetauth.h
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/ReadMe.txt
+END
+uvnc_settings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/uvnc_settings.cpp
+END
+uvnc_settingsv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/uvnc_settingsv11.vcxproj
+END
+uvnc_settingsv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ultravnc/!svn/ver/4/trunk/uvnc_settings/uvnc_settings/uvnc_settingsv12.vcxproj
+END

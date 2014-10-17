@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/ultravnc/!svn/ver/4/trunk/ZipUnZip32
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/ZipUnZip32/LICENSE
+END
+ZipUnZip32.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/ZipUnZip32/ZipUnZip32.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ultravnc/!svn/ver/4/trunk/ZipUnZip32/README
+END
+ZipUnzip32.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/ZipUnZip32/ZipUnzip32.cpp
+END

@@ -1,0 +1,899 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ultravnc/!svn/ver/13/trunk/winvnc/winvnc
+END
+rfbRegion_win32.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbRegion_win32.cpp
+END
+vncencodehext.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencodehext.h
+END
+Dtwinver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/Dtwinver.cpp
+END
+vncdesktopsink.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vncdesktopsink.cpp
+END
+vistahook.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vistahook.cpp
+END
+vncdesktopthread.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncdesktopthread.cpp
+END
+vncmenu.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vncmenu.cpp
+END
+vncserver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vncserver.cpp
+END
+vncencoderre.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencoderre.cpp
+END
+vncencodemgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencodemgr.h
+END
+vncabout.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncabout.cpp
+END
+black_layered.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/black_layered.cpp
+END
+vncsetauth.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vncsetauth.cpp
+END
+vncsockconnect.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncsockconnect.h
+END
+vncinsthandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncinsthandler.h
+END
+rfbUpdateTracker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbUpdateTracker.cpp
+END
+httpconnect.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/httpconnect.cpp
+END
+vnclogon.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vnclogon.h
+END
+winvnc.exe.x86.manifest
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc.exe.x86.manifest
+END
+vncpropertiesPoll.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncpropertiesPoll.h
+END
+service.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/service.cpp
+END
+vncencodezrle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencodezrle.cpp
+END
+vncencodecorre.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencodecorre.h
+END
+security.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/security.cpp
+END
+Dtwinver.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/Dtwinver.h
+END
+vncservice.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncservice.h
+END
+winvnc.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/6/trunk/winvnc/winvnc/winvnc.vcxproj
+END
+vncpasswd.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncpasswd.h
+END
+Timer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/Timer.cpp
+END
+vncdesktop.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vncdesktop.cpp
+END
+CpuUsage.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/CpuUsage.h
+END
+vncencoderCursor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencoderCursor.cpp
+END
+inifile.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/inifile.h
+END
+winvnc.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc.vcproj
+END
+vnclog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vnclog.cpp
+END
+TextChat.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/TextChat.h
+END
+translate.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/translate.cpp
+END
+vncencodecorre.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencodecorre.cpp
+END
+uvncUiAccess.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/uvncUiAccess.h
+END
+vnckeymap.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vnckeymap.h
+END
+vncservice.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncservice.cpp
+END
+vncMultiMonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncMultiMonitor.cpp
+END
+vncListDlg.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncListDlg.h
+END
+rfb.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfb.h
+END
+vsocket.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vsocket.cpp
+END
+inifile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/inifile.cpp
+END
+vncbuffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncbuffer.cpp
+END
+stdhdrs.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/stdhdrs.h
+END
+winvnc.exe.x64.manifest
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc.exe.x64.manifest
+END
+vncconndialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncconndialog.h
+END
+vnctimedmsgbox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vnctimedmsgbox.cpp
+END
+vncclient.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncclient.h
+END
+vncEncodeZlib.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeZlib.h
+END
+rfbMisc.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbMisc.h
+END
+vncDesktopSW.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncDesktopSW.cpp
+END
+getinfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/getinfo.cpp
+END
+uvncUiAccess.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/uvncUiAccess.cpp
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/resource.h
+END
+vncOSVersion.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncOSVersion.cpp
+END
+tableinittctemplate.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/tableinittctemplate.cpp
+END
+blankmonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/blankmonitor.cpp
+END
+winvncVS2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvncVS2005.vcproj
+END
+vnchttpconnect.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vnchttpconnect.h
+END
+keysymdef.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/7/trunk/winvnc/winvnc/keysymdef.h
+END
+vncmemcpy.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncmemcpy.h
+END
+vncauth.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncauth.c
+END
+vncEncodeTight.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeTight.h
+END
+stdhdrs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/stdhdrs.cpp
+END
+vncauth.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncauth.h
+END
+WINVNC.DSW
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/WINVNC.DSW
+END
+vncsockconnect.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncsockconnect.cpp
+END
+IPC.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/IPC.h
+END
+vncencoderre.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencoderre.h
+END
+vncserver.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncserver.h
+END
+vsocket.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vsocket.h
+END
+vncabout.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncabout.h
+END
+vncEncodeZlibHex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeZlibHex.cpp
+END
+httpconnect.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/httpconnect.h
+END
+vtypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vtypes.h
+END
+helpers.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/helpers.cpp
+END
+vncOSVersion.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncOSVersion.h
+END
+winvncv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvncv11.vcxproj
+END
+winvncv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvncv12.vcxproj
+END
+vncencodezrle.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencodezrle.h
+END
+winvnc.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc.dsp
+END
+vncproperties.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncproperties.h
+END
+winvnc.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/winvnc.h
+END
+IPC.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/IPC.cpp
+END
+CpuUsage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/CpuUsage.cpp
+END
+vncEncodeUltra.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeUltra.h
+END
+TextChat.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/TextChat.cpp
+END
+winvnc.rc
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc.rc
+END
+vncacceptdialog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vncacceptdialog.cpp
+END
+vncencodehext.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencodehext.cpp
+END
+minmax.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/minmax.h
+END
+vncEncodeZlibHex.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeZlibHex.h
+END
+translate.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/translate.h
+END
+d3des.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/d3des.c
+END
+vncproperties.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncproperties.cpp
+END
+d3des.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/d3des.h
+END
+initipp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/initipp.cpp
+END
+vncdesktopthread.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncdesktopthread.h
+END
+buildtime.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/buildtime.cpp
+END
+rfbRegion.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbRegion.h
+END
+winvnc.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc.vcxproj.filters
+END
+vncconndialog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncconndialog.cpp
+END
+vnclogon.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vnclogon.cpp
+END
+rfbRegion_X11.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbRegion_X11.cxx
+END
+vncencoder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencoder.cpp
+END
+tableinitcmtemplate.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/tableinitcmtemplate.cpp
+END
+vncsetauth.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncsetauth.h
+END
+benchmark.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/benchmark.cpp
+END
+tabletranstemplate.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/tabletranstemplate.cpp
+END
+vncacceptdialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncacceptdialog.h
+END
+rfbRect.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbRect.h
+END
+rfbUpdateTracker.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbUpdateTracker.h
+END
+Localization.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/Localization.h
+END
+vnctimedmsgbox.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vnctimedmsgbox.h
+END
+vncEncodeUltra2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeUltra2.cpp
+END
+vnchttpconnect.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vnchttpconnect.cpp
+END
+vncEncodeTight.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeTight.cpp
+END
+winvnc.exe.manifest
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc.exe.manifest
+END
+HideDesktop.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/HideDesktop.h
+END
+rfbRegion_X11.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbRegion_X11.h
+END
+winvnc_fr.rc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc_fr.rc
+END
+videodrivercheck.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/videodrivercheck.cpp
+END
+service_motor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/service_motor.cpp
+END
+videodriver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/videodriver.cpp
+END
+winvnc_vs90_Release_Win32.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/winvnc_vs90_Release_Win32.lnt
+END
+read_write_ini.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/read_write_ini.cpp
+END
+vncdesktop.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncdesktop.h
+END
+Timer.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/Timer.h
+END
+vncencoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncencoder.h
+END
+vnclog.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vnclog.h
+END
+vnckeymap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/7/trunk/winvnc/winvnc/vnckeymap.cpp
+END
+vncEncodeUltra2.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeUltra2.h
+END
+HideDesktop.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/HideDesktop.cpp
+END
+rfbRegion_win32.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/rfbRegion_win32.h
+END
+winvnc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/winvnc.cpp
+END
+vncListDlg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncListDlg.cpp
+END
+vncEncodeUltra.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeUltra.cpp
+END
+vncmenu.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncmenu.h
+END
+vncntlm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncntlm.cpp
+END
+vncinsthandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vncinsthandler.cpp
+END
+vncclient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/10/trunk/winvnc/winvnc/vncclient.cpp
+END
+vncbuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncbuffer.h
+END
+vncEncodeZlib.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncEncodeZlib.cpp
+END
+videodriver.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/videodriver.h
+END
+vncpropertiesPoll.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/winvnc/vncpropertiesPoll.cpp
+END

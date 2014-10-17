@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/ultravnc/!svn/ver/4/trunk/common
+END
+rfb.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/ultravnc/!svn/ver/4/trunk/common/rfb.h
+END
+Clipboard.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/common/Clipboard.cpp
+END
+ScopeGuard.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/common/ScopeGuard.h
+END
+Clipboard.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/common/Clipboard.h
+END
+win32_helpers.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/common/win32_helpers.cpp
+END
+win32_helpers.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/common/win32_helpers.h
+END

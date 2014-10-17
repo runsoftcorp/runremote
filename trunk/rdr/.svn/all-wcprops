@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/ultravnc/!svn/ver/4/trunk/rdr
+END
+NullOutStream.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/rdr/NullOutStream.cxx
+END
+rdr.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ultravnc/!svn/ver/4/trunk/rdr/rdr.vcxproj
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ultravnc/!svn/ver/4/trunk/rdr/Makefile.in
+END
+FdInStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ultravnc/!svn/ver/4/trunk/rdr/FdInStream.h
+END
+InStream.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ultravnc/!svn/ver/4/trunk/rdr/InStream.cxx
+END
+FdOutStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ultravnc/!svn/ver/4/trunk/rdr/FdOutStream.h
+END
+Exception.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ultravnc/!svn/ver/4/trunk/rdr/Exception.h
+END
+rdr_vs90_Release_Win32.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/rdr/rdr_vs90_Release_Win32.lnt
+END
+FixedMemOutStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/rdr/FixedMemOutStream.h
+END
+rdr.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/rdr/rdr.vcxproj.filters
+END
+ZlibInStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/rdr/ZlibInStream.h
+END
+rdr.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ultravnc/!svn/ver/4/trunk/rdr/rdr.vcproj
+END
+ZlibOutStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/rdr/ZlibOutStream.h
+END
+types.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/ultravnc/!svn/ver/4/trunk/rdr/types.h
+END
+FdInStream.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/rdr/FdInStream.cxx
+END
+FdOutStream.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/rdr/FdOutStream.cxx
+END
+ZlibInStream.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/rdr/ZlibInStream.cxx
+END
+NullOutStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/rdr/NullOutStream.h
+END
+ZlibOutStream.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/rdr/ZlibOutStream.cxx
+END
+MemInStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ultravnc/!svn/ver/4/trunk/rdr/MemInStream.h
+END
+MemOutStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/rdr/MemOutStream.h
+END
+Makefile.bcc32
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/rdr/Makefile.bcc32
+END
+InStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ultravnc/!svn/ver/4/trunk/rdr/InStream.h
+END
+OutStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ultravnc/!svn/ver/4/trunk/rdr/OutStream.h
+END
+rdrv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/rdr/rdrv11.vcxproj
+END
+rdrvs2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/rdr/rdrvs2005.vcproj
+END
+rdrv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/rdr/rdrv12.vcxproj
+END
+rdr.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/ultravnc/!svn/ver/4/trunk/rdr/rdr.dsp
+END

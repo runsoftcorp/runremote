@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/old/ddihook/vncddihook
+END
+vncddihk.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/old/ddihook/vncddihook/vncddihk.h
+END
+VNCDDIHK.RES
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/old/ddihook/vncddihook/VNCDDIHK.RES
+END
+vncddihk.DEF
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/old/ddihook/vncddihook/vncddihk.DEF
+END
+vncddihk.C
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/old/ddihook/vncddihook/vncddihk.C
+END
+DLLENTRY.ASM
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/old/ddihook/vncddihook/DLLENTRY.ASM
+END
+HEAP.ASM
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/old/ddihook/vncddihook/HEAP.ASM
+END
+vncddihk.RC
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/old/ddihook/vncddihook/vncddihk.RC
+END

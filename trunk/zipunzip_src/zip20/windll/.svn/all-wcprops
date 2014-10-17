@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll
+END
+windll.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/windll.h
+END
+example.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/example.h
+END
+zipver.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/zipver.h
+END
+ziplib.def
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/ziplib.def
+END
+windll.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/windll.txt
+END
+windll.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/windll.c
+END
+windll32.def
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/windll32.def
+END
+example.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/example.c
+END
+windll.rc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/windll.rc
+END
+contents
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/contents
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/resource.h
+END
+structs.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/structs.h
+END
+windll16.def
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/windll/windll16.def
+END

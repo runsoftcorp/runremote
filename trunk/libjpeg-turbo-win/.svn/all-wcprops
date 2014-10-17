@@ -1,0 +1,959 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/11/trunk/libjpeg-turbo-win
+END
+filelist.doc
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/filelist.doc
+END
+libjpeg-turbo-winv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/libjpeg-turbo-winv11.vcxproj
+END
+libjpeg-turbo-winv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/libjpeg-turbo-winv12.vcxproj
+END
+jchuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jchuff.c
+END
+djpeg.1
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/djpeg.1
+END
+coderules.doc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/coderules.doc
+END
+jchuff.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jchuff.h
+END
+testorig.ppm
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testorig.ppm
+END
+ltmain.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/ltmain.sh
+END
+transupp.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/transupp.c
+END
+jcparam.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcparam.c
+END
+transupp.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/transupp.h
+END
+configure.ac
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/configure.ac
+END
+jquant1.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jquant1.c
+END
+jcphuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcphuff.c
+END
+wrjpgcom.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/wrjpgcom.c
+END
+jpegut.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jpegut.c
+END
+jmemmgr.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jmemmgr.c
+END
+jcmarker.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcmarker.c
+END
+jcsample.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcsample.c
+END
+jdsample.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdsample.c
+END
+jdmarker.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdmarker.c
+END
+jpgtest.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jpgtest.cxx
+END
+rdcolmap.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdcolmap.c
+END
+jmorecfg.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jmorecfg.h
+END
+testorig-nosimd.ppm
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testorig-nosimd.ppm
+END
+jinclude.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jinclude.h
+END
+jconfig.doc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jconfig.doc
+END
+jpegint.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jpegint.h
+END
+jsimddct.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jsimddct.h
+END
+rdrle.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdrle.c
+END
+libjpeg-turbo-win.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ultravnc/!svn/ver/11/trunk/libjpeg-turbo-win/libjpeg-turbo-win.vcxproj
+END
+jsimd.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jsimd.h
+END
+jdinput.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdinput.c
+END
+testimgfst-nosimd.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgfst-nosimd.jpg
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/LICENSE.txt
+END
+jpeglib.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jpeglib.h
+END
+rdjpgcom.1
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdjpgcom.1
+END
+rdtarga.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdtarga.c
+END
+testimgfst.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgfst.jpg
+END
+djpeg.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/djpeg.c
+END
+install.doc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/install.doc
+END
+jdpostct.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdpostct.c
+END
+jmemsys.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jmemsys.h
+END
+cdjpeg.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/cdjpeg.c
+END
+cdjpeg.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/cdjpeg.h
+END
+rdbmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdbmp.c
+END
+wrppm.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/wrppm.c
+END
+cjpeg.1
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/cjpeg.1
+END
+jfdctfst.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jfdctfst.c
+END
+jcmaster.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcmaster.c
+END
+testimg.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimg.bmp
+END
+jdmaster.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdmaster.c
+END
+config.guess
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/config.guess
+END
+jidctfst.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jidctfst.c
+END
+turbojpegl.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/turbojpegl.c
+END
+wrgif.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/wrgif.c
+END
+testimgp-nosimd.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgp-nosimd.jpg
+END
+README-turbo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/README-turbo.txt
+END
+jquant2.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jquant2.c
+END
+testimgint.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgint.jpg
+END
+jdct.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdct.h
+END
+jdatasrc.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdatasrc.c
+END
+jcapistd.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcapistd.c
+END
+jdapistd.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdapistd.c
+END
+jversion.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jversion.h
+END
+rdjpgcom.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdjpgcom.c
+END
+libjpeg-turbo-win.sln
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/libjpeg-turbo-win.sln
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/README
+END
+jdmerge.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdmerge.c
+END
+bmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/bmp.c
+END
+bmp.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/bmp.h
+END
+acinclude.m4
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/acinclude.m4
+END
+cjpeg.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/cjpeg.c
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/Makefile.am
+END
+jdcolor.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdcolor.c
+END
+aclocal.m4
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/aclocal.m4
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/install-sh
+END
+jdatadst.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdatadst.c
+END
+testorig.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testorig.jpg
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/Makefile.in
+END
+jdtrans.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdtrans.c
+END
+depcomp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/depcomp
+END
+wrtarga.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/wrtarga.c
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/config.h
+END
+testimgint-nosimd.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgint-nosimd.jpg
+END
+structure.doc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/structure.doc
+END
+libjpeg-turbo-win.suo
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/libjpeg-turbo-win.suo
+END
+change.log
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/change.log
+END
+jaricom.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jaricom.c
+END
+jsimd_none.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jsimd_none.c
+END
+rdswitch.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdswitch.c
+END
+rrtimer.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rrtimer.h
+END
+jccolor.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jccolor.c
+END
+turbojpeg-mapfile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/turbojpeg-mapfile
+END
+jfdctflt.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jfdctflt.c
+END
+jidctflt.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jidctflt.c
+END
+jctrans.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jctrans.c
+END
+turbojpeg.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/turbojpeg.h
+END
+testimgflt-nosimd.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgflt-nosimd.jpg
+END
+jutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jutils.c
+END
+jcprepct.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcprepct.c
+END
+config.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/config.h.in
+END
+libjpeg-turbo-win.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/libjpeg-turbo-win.vcxproj.filters
+END
+libjpeg-turbo-win.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/libjpeg-turbo-win.vcproj
+END
+rdppm.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdppm.c
+END
+wizard.doc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/wizard.doc
+END
+jdmrgext.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdmrgext.c
+END
+jdarith.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdarith.c
+END
+rrutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rrutil.h
+END
+jpegtran.1
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jpegtran.1
+END
+jcmainct.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcmainct.c
+END
+jdmainct.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdmainct.c
+END
+BUILDING.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/BUILDING.txt
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/ReadMe.txt
+END
+jcapimin.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcapimin.c
+END
+testimgfst-nosimd.ppm
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgfst-nosimd.ppm
+END
+testimgp.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgp.jpg
+END
+rdgif.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/rdgif.c
+END
+LGPL.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/LGPL.txt
+END
+jdapimin.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdapimin.c
+END
+wrrle.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/wrrle.c
+END
+jcdctmgr.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcdctmgr.c
+END
+jddctmgr.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jddctmgr.c
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/configure
+END
+testimgfst.ppm
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgfst.ppm
+END
+jerror.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jerror.c
+END
+jdhuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdhuff.c
+END
+compile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/compile
+END
+jerror.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jerror.h
+END
+jpegcomp.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jpegcomp.h
+END
+jmemnobs.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jmemnobs.c
+END
+jdhuff.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdhuff.h
+END
+jccolext.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jccolext.c
+END
+config.sub
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/config.sub
+END
+jdcolext.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdcolext.c
+END
+jcinit.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcinit.c
+END
+testimgflt.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgflt.jpg
+END
+jcarith.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcarith.c
+END
+usage.doc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/usage.doc
+END
+wrbmp.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/wrbmp.c
+END
+jconfig.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jconfig.h.in
+END
+example.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/example.c
+END
+libjpeg.doc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/libjpeg.doc
+END
+testimg-nosimd.bmp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimg-nosimd.bmp
+END
+testimgint.ppm
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/testimgint.ppm
+END
+jfdctint.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jfdctint.c
+END
+cderror.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/cderror.h
+END
+wrjpgcom.1
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/wrjpgcom.1
+END
+jidctint.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jidctint.c
+END
+jpegtran.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jpegtran.c
+END
+jccoefct.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jccoefct.c
+END
+jdcoefct.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdcoefct.c
+END
+jcomapi.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jcomapi.c
+END
+ChangeLog.txt
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/ChangeLog.txt
+END
+jconfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jconfig.h
+END
+jdphuff.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jdphuff.c
+END
+missing
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/missing
+END
+jidctred.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/libjpeg-turbo-win/jidctred.c
+END

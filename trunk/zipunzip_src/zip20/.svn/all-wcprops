@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20
+END
+crctab.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/crctab.c
+END
+tailor.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/tailor.h
+END
+timezone.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/timezone.h
+END
+crc_i386.S
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/crc_i386.S
+END
+crypt.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/crypt.c
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/LICENSE
+END
+zip.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/zip.c
+END
+zipfile.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/zipfile.c
+END
+revision.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/revision.h
+END
+deflate.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/deflate.c
+END
+crypt.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/crypt.h
+END
+zip.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/zip.h
+END
+zipup.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/zipup.c
+END
+fileio.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/fileio.c
+END
+ttyio.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/ttyio.c
+END
+api.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/api.c
+END
+match.S
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/match.S
+END
+crc32.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/crc32.c
+END
+zipcloak.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/zipcloak.c
+END
+util.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/util.c
+END
+ttyio.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/ttyio.h
+END
+ebcdic.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/ebcdic.h
+END
+api.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/api.h
+END
+zipsplit.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/zipsplit.c
+END
+ziperr.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/ziperr.h
+END
+trees.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/trees.c
+END
+globals.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/globals.c
+END
+zip232.ann
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/zip232.ann
+END
+zipnote.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/zipnote.c
+END
+timezone.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/timezone.c
+END

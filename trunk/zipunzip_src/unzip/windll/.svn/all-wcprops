@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll
+END
+windll.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/windll.h
+END
+windllgcc.def
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/windllgcc.def
+END
+decs.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/decs.h
+END
+windll_lc.def
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/windll_lc.def
+END
+uzexampl.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/uzexampl.c
+END
+windll.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/windll.txt
+END
+unziplib.def
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/unziplib.def
+END
+windll.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/windll.c
+END
+uzexampl.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/uzexampl.h
+END
+windll32.def
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/windll32.def
+END
+windll.rc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/windll.rc
+END
+Contents
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/Contents
+END
+structs.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/structs.h
+END
+windll16.def
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/unzip/windll/windll16.def
+END

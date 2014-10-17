@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ultravnc/!svn/ver/5/trunk/nsam_build_exe
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/5/trunk/nsam_build_exe/LICENSE
+END
+nasm.exe
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/5/trunk/nsam_build_exe/nasm.exe
+END
+ndisasm.exe
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/5/trunk/nsam_build_exe/ndisasm.exe
+END

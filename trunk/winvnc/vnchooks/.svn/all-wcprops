@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ultravnc/!svn/ver/12/trunk/winvnc/vnchooks
+END
+vnchooks.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooks.dsp
+END
+VNCHooks.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/VNCHooks.h
+END
+SharedData.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/SharedData.cpp
+END
+VNCHooks-bcc32.def
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/VNCHooks-bcc32.def
+END
+vnchooks.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/12/trunk/winvnc/vnchooks/vnchooks.vcxproj
+END
+SharedData.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/SharedData.h
+END
+VNCHooks.def
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/VNCHooks.def
+END
+vnchooks_vs90_Release_Win32.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooks_vs90_Release_Win32.lnt
+END
+vnchooks.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooks.vcxproj.filters
+END
+vnchooks.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooks.vcproj
+END
+VNCHooks-vc.def
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/VNCHooks-vc.def
+END
+vnchooks.rc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooks.rc
+END
+vnchooks_vs90_Debug_Win32.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooks_vs90_Debug_Win32.lnt
+END
+Makefile.bcc32
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/Makefile.bcc32
+END
+VNCHooks.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/VNCHooks.cpp
+END
+vnchooksVS2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooksVS2005.vcproj
+END
+vnchooksv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooksv11.vcxproj
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/resource.h
+END
+vnchooksv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/vnchooks/vnchooksv12.vcxproj
+END

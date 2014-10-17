@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32
+END
+match32.asm
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/match32.asm
+END
+rsxntwin.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/rsxntwin.h
+END
+makefile.w10
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.w10
+END
+makefile.ibm
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.ibm
+END
+win32.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/win32.c
+END
+readme.a64
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/readme.a64
+END
+makefile.w32
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.w32
+END
+README.TZ
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/README.TZ
+END
+zipup.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/zipup.h
+END
+makefile.bor
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.bor
+END
+crc_i386.asm
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/crc_i386.asm
+END
+zip.def
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/zip.def
+END
+osdep.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/osdep.h
+END
+crc_i386.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/crc_i386.c
+END
+nt.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/nt.c
+END
+makefile.emx
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.emx
+END
+makefile.a64
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.a64
+END
+win32zip.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/win32zip.c
+END
+gvmat64.asm
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/gvmat64.asm
+END
+crc_lcc.asm
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/crc_lcc.asm
+END
+makefile.wat
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.wat
+END
+nt.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/nt.h
+END
+makefile.gcc
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.gcc
+END
+makefile.dj
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.dj
+END
+win32zip.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/win32zip.h
+END
+makefile.lcc
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/makefile.lcc
+END
+lm32_lcc.asm
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/lm32_lcc.asm
+END
+README.NT
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/zipunzip_src/zip20/win32/README.NT
+END

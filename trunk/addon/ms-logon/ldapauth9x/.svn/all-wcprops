@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x
+END
+ldapauth9x.def
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapauth9x.def
+END
+ldapAuth9x.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapAuth9x.cpp
+END
+ldapauth9x.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapauth9x.vcxproj.filters
+END
+ldapauth9x.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapauth9x.vcproj
+END
+ldapauth9xv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapauth9xv11.vcxproj
+END
+ldapauth9xvs2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapauth9xvs2005.vcproj
+END
+ldapAuth9x.rc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapAuth9x.rc
+END
+ldapauth9xv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapauth9xv12.vcxproj
+END
+ldapauth9x.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapauth9x.dsp
+END
+ldapAuth9x.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapAuth9x.h
+END
+ldapauth9x.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/ldapauth9x.vcxproj
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/ldapauth9x/resource.h
+END

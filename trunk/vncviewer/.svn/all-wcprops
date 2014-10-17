@@ -1,0 +1,569 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/ultravnc/!svn/ver/12/trunk/vncviewer
+END
+ClientConnectionCacheRect.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionCacheRect.cpp
+END
+vncviewer_vs2005.sln
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer_vs2005.sln
+END
+ToDo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ToDo.txt
+END
+SessionDialog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/SessionDialog.cpp
+END
+vncviewer_vs2008.sln
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer_vs2008.sln
+END
+ClientConnectionRRE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionRRE.cpp
+END
+vncviewervs2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewervs2005.vcproj
+END
+display.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/display.h
+END
+ClientConnectionClipboard.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionClipboard.cpp
+END
+VNCviewerApp.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/VNCviewerApp.h
+END
+LowLevelHook.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/LowLevelHook.h
+END
+MessBox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/MessBox.cpp
+END
+vncviewer.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/11/trunk/vncviewer/vncviewer.vcxproj
+END
+ClientConnectionHextile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionHextile.cpp
+END
+VNCviewerApp32.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/VNCviewerApp32.h
+END
+TextChat.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/TextChat.cpp
+END
+FileTransfer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/9/trunk/vncviewer/FileTransfer.cpp
+END
+MEssBox.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/MEssBox.h
+END
+AuthDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/AuthDialog.h
+END
+keysym.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/keysym.h
+END
+AboutBox.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/AboutBox.h
+END
+vncviewer.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer.vcxproj.filters
+END
+ClientConnectionCoRRE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionCoRRE.cpp
+END
+vncviewer.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer.vcproj
+END
+Exception.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/Exception.cpp
+END
+LICENCE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/LICENCE.txt
+END
+vncviewer_vs2013.sln
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer_vs2013.sln
+END
+d3des.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/d3des.c
+END
+display.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/display.cpp
+END
+ClientConnectionCopyRect.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionCopyRect.cpp
+END
+d3des.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/d3des.h
+END
+Daemon.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/Daemon.h
+END
+ClientConnectionRaw.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionRaw.cpp
+END
+multimon.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/multimon.h
+END
+VNCviewerApp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/VNCviewerApp.cpp
+END
+vncviewerv11.sln
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewerv11.sln
+END
+vncviewer.exe.manifest
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer.exe.manifest
+END
+initipp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/initipp.cpp
+END
+buildtime.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/buildtime.cpp
+END
+ClientConnectionZlib.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionZlib.cpp
+END
+AuthDialog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/AuthDialog.cpp
+END
+ClientConnectionFullScreen.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionFullScreen.cpp
+END
+AboutBox.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/AboutBox.cpp
+END
+KeyMapjap.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/KeyMapjap.h
+END
+FileTransfer.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/FileTransfer.h
+END
+TextChat.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/TextChat.h
+END
+ClientConnectionCursor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionCursor.cpp
+END
+ClientConnectionTight.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionTight.cpp
+END
+ClientConnection.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/12/trunk/vncviewer/ClientConnection.cpp
+END
+ClientConnectionFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionFile.cpp
+END
+VNCOptions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/12/trunk/vncviewer/VNCOptions.cpp
+END
+Exception.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/Exception.h
+END
+Daemon.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/Daemon.cpp
+END
+vncviewer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer.cpp
+END
+AccelKeys.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/AccelKeys.h
+END
+MRU.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/MRU.h
+END
+rfb.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/rfb.h
+END
+stdhdrs.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/stdhdrs.h
+END
+KeyMapjap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/KeyMapjap.cpp
+END
+vncviewer.sln
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer.sln
+END
+KeyMap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/KeyMap.cpp
+END
+Log.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/Log.h
+END
+Makefile.bcc32
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/Makefile.bcc32
+END
+bmpFlasher.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/bmpFlasher.h
+END
+History.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/History.txt
+END
+FullScreenTitleBar.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/FullScreenTitleBar.h
+END
+keysymdefjap.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/keysymdefjap.h
+END
+MessBox2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/MessBox2.cpp
+END
+MRU.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/MRU.cpp
+END
+ClientConnection.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnection.h
+END
+AccelKeys.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/AccelKeys.cpp
+END
+FullScreenTitleBarConst.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/FullScreenTitleBarConst.h
+END
+COPYING.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/COPYING.txt
+END
+keysymdef.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/keysymdef.h
+END
+ClientConnectionUltra.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionUltra.cpp
+END
+VNCOptions.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/VNCOptions.h
+END
+SessionDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/SessionDialog.h
+END
+vncauth.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncauth.c
+END
+vncviewerv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewerv11.vcxproj
+END
+LowLevelHook.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/LowLevelHook.cpp
+END
+vncviewerv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewerv12.vcxproj
+END
+stdhdrs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/stdhdrs.cpp
+END
+vncviewer.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer.dsp
+END
+zrle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/zrle.cpp
+END
+vncauth.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncauth.h
+END
+vncviewer.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer.h
+END
+VNCviewerApp32.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/VNCviewerApp32.cpp
+END
+Log.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/Log.cpp
+END
+bmpFlasher.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/bmpFlasher.cpp
+END
+vncviewer.dsw
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/vncviewer.dsw
+END
+ClientConnectionZlibHex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionZlibHex.cpp
+END
+ClientConnectionUltra2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/ClientConnectionUltra2.cpp
+END
+FullScreenTitleBar.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/vncviewer/FullScreenTitleBar.cpp
+END
+KeyMap.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ultravnc/!svn/ver/7/trunk/vncviewer/KeyMap.h
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/ultravnc/!svn/ver/4/trunk/lzo
+END
+lzoconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ultravnc/!svn/ver/4/trunk/lzo/lzoconf.h
+END
+minilzo.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ultravnc/!svn/ver/4/trunk/lzo/minilzo.c
+END
+minilzo.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ultravnc/!svn/ver/4/trunk/lzo/minilzo.h
+END
+lzodefs.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ultravnc/!svn/ver/4/trunk/lzo/lzodefs.h
+END

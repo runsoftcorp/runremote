@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread
+END
+omnithread.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithread.dsp
+END
+omnithread_vs90_Debug_Win32.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithread_vs90_Debug_Win32.lnt
+END
+omnithread.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithread.h
+END
+nt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/nt.cpp
+END
+threaddata.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/threaddata.cpp
+END
+omnithread.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithread.vcxproj
+END
+nt.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/nt.h
+END
+omnithread_vs90_Release_Win32.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithread_vs90_Release_Win32.lnt
+END
+omnithread.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithread.vcproj
+END
+omnithreadVS2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithreadVS2005.vcproj
+END
+omnithreadv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithreadv11.vcxproj
+END
+omnithreadv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/omnithreadv12.vcxproj
+END
+build-bcc32.bat
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/winvnc/omnithread/build-bcc32.bat
+END

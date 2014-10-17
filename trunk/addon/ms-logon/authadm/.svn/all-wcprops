@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm
+END
+authadmin.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.dsp
+END
+authadmin.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.h
+END
+authadmin.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.vcxproj
+END
+authadmin.dsw
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.dsw
+END
+authadmin.def
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.def
+END
+authadmin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.cpp
+END
+authadmin.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.vcxproj.filters
+END
+authadmin.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.vcproj
+END
+authadminVS2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadminVS2005.vcproj
+END
+authadminv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadminv11.vcxproj
+END
+authadmin.rc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadmin.rc
+END
+authadminv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/authadminv12.vcxproj
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/authadm/resource.h
+END

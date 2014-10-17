@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin
+END
+StdAfx.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/StdAfx.h
+END
+utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/utils.cpp
+END
+myDebug.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/myDebug.h
+END
+crypto.rc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/crypto.rc
+END
+utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/utils.h
+END
+MSRC4Plugin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/MSRC4Plugin.cpp
+END
+version.rc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/version.rc
+END
+registry.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/registry.cpp
+END
+MSRC4Plugin.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/MSRC4Plugin.dsp
+END
+MSRC4Plugin.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/MSRC4Plugin.h
+END
+registry.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/registry.h
+END
+crypto.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/crypto.cpp
+END
+MSRC4Plugin.dsw
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/MSRC4Plugin.dsw
+END
+crypto.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/crypto.dsp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/main.cpp
+END
+crypto.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/crypto.h
+END
+logging.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/logging.cpp
+END
+EnvReg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/EnvReg.cpp
+END
+StdAfx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/StdAfx.cpp
+END
+MSRC4Plugin.rc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/MSRC4Plugin.rc
+END
+main.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/main.h
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/version.h
+END
+logging.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/logging.h
+END
+crypto.dsw
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/crypto.dsw
+END
+EnvReg.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/EnvReg.h
+END
+myDebug.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/myDebug.cpp
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/DSMPlugin/MSRC4Plugin/resource.h
+END

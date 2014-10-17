@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ultravnc/!svn/ver/12/trunk/addon/ms-logon/logging
+END
+logging.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ultravnc/!svn/ver/12/trunk/addon/ms-logon/logging/logging.vcxproj
+END
+logging.dsw
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/logging.dsw
+END
+logging.def
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/logging.def
+END
+logging.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/logging.cpp
+END
+logging.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/logging.vcxproj.filters
+END
+logging.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/logging.vcproj
+END
+loggingv11.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/loggingv11.vcxproj
+END
+loggingvs2005.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/loggingvs2005.vcproj
+END
+logging.rc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/logging.rc
+END
+loggingv12.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/loggingv12.vcxproj
+END
+logging.dsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/logging.dsp
+END
+logging.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/logging.h
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ultravnc/!svn/ver/4/trunk/addon/ms-logon/logging/resource.h
+END
