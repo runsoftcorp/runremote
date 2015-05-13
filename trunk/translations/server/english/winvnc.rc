@@ -500,7 +500,7 @@ IDB_BITMAP3             BITMAP                  "res\\runas.bmp"
 STRINGTABLE
 BEGIN
     IDI_WINVNC              "runRemote VNC"
-    IDS_WARNING             "경고 : 기본적으로이 세션이 어떠한 암호화를 사용하지 않습니다. 당신이 당신의 연결되었는지 확실하지 않으면 민감한 데이터를 보내는 데 사용하지 마십시오."
+    IDS_WARNING             "알림 : 이 대화창은 암호화 되지 않으니 비밀유지가 필요한 대화는 접속창에 있는 채팅하기를 이용해주시기 바랍니다."
 END
 
 STRINGTABLE

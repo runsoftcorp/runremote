@@ -1,8 +1,7 @@
-//  Copyright (C) 1999 AT&T Laboratories Cambridge. All Rights Reserved.
+/////////////////////////////////////////////////////////////////////////////
+//  Copyright (C) 2002-2013 UltraVNC Team Members. All Rights Reserved.
 //
-//  This file is part of the VNC system.
-//
-//  The VNC system is free software; you can redistribute it and/or modify
+//  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation; either version 2 of the License, or
 //  (at your option) any later version.
@@ -17,9 +16,12 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,
 //  USA.
 //
-// If the source code for the VNC system is not available from the place 
-// whence you received this file, check http://www.uk.research.att.com/vnc or contact
-// the authors on vnc@uk.research.att.com for information on obtaining it.
+// If the source code for the program is not available from the place from
+// which you received this file, check 
+// http://www.uvnc.com/
+//
+////////////////////////////////////////////////////////////////////////////
+ 
 
 
 
@@ -67,17 +69,15 @@ static LRESULT CALLBACK MessageDlgProc2(HWND hwnd, UINT iMsg,
 		if (LOWORD(wParam) == IDOK) {
 			EndDialog(hwnd, TRUE);
 		}
-		if (LOWORD(wParam) == IDC_BUTTON1) {
+		if(LOWORD(wParam) == IDC_BUTTON1) {
 			char link[256];
 			char tempchar[10];
-			strcpy(link,"http://www.uvnc.com/onlinehelp/");
-			_itoa(g_error_nr2,tempchar,10);
-			strcat(link,tempchar);
-			strcat(link,".html");
+			strcpy(link, "http://www.runremote.net");
+
 			ShellExecute(GetDesktopWindow(), "open", link, "", 0, SW_SHOWNORMAL);
 		}
 		if (LOWORD(wParam) == IDC_BUTTON2) {
-			ShellExecute(GetDesktopWindow(), "open", "http://sponsor.uvnc.com/index.html", "", 0, SW_SHOWNORMAL);
+			ShellExecute(GetDesktopWindow(), "open", "http://www.runtalk.co.kr/", "", 0, SW_SHOWNORMAL);
 		}
 	}
 	return FALSE;

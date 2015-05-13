@@ -117,6 +117,19 @@ PixelCaptureEngine::PixelCaptureEngineInit(HDC rootdc, HDC memdc, HBITMAP membit
 		m_ScreenOffsety=offsety;
 	}
 
+//SImulate high load biblt
+void Highcpu(long counter)
+{
+	float number = 1.5;
+
+	while (counter>0)
+	{
+		number *= number;
+		counter--;
+	}
+
+}
+
 bool
 PixelCaptureEngine::CaptureRect(const rfb::Rect& rect)
 	{
@@ -125,7 +138,8 @@ PixelCaptureEngine::CaptureRect(const rfb::Rect& rect)
 				m_rect = rect;
 				if ((m_oldbitmap = (HBITMAP) SelectObject(m_hmemdc, m_membitmap)) == NULL)
 					return false;
-
+				//Highcpu(100000000);
+	//			Beep(1000, 100);
 				// Capture screen into bitmap
 				BOOL blitok = BitBlt(m_hmemdc, 0, 0, rect.width(), rect.height(), m_hrootdc_PixelEngine, rect.tl.x + m_ScreenOffsetx, rect.tl.y + m_ScreenOffsety,
 									 m_bCaptureAlpha ? (CAPTUREBLT | SRCCOPY) : SRCCOPY);
@@ -1580,9 +1594,9 @@ vncDesktop::WriteMessageOnScreen(char * tt,BYTE *scrBuff, UINT scrBuffSize)
 {
 	// Select the memory bitmap into the memory DC
 	RECT rect;
-	SetRect(&rect, 0,0, 300, 120);
+	SetRect(&rect, 0,0, 380, 180);
 	COLORREF bgcol =RGB(0xff, 0x00, 0x00);
-	COLORREF oldtxtcol =SetTextColor(m_hmemdc, RGB(0,0,254));
+	COLORREF oldtxtcol =SetTextColor(m_hmemdc, RGB(255, 255, 255));
 	COLORREF oldbgcol  =SetBkColor(  m_hmemdc, bgcol);
 	HBRUSH backgroundBrush = CreateSolidBrush(bgcol);
 
@@ -1617,6 +1631,9 @@ void
 vncDesktop::CaptureScreen(const rfb::Rect &rect, BYTE *scrBuff, UINT scrBuffSize,BOOL capture)
 {
 	assert(rect.enclosed_by(m_bmrect));
+
+	//Highcpu(100000000);
+	//Beep(100, 100);
 	if (capture)
 	{
 		// Select the memory bitmap into the memory DC
@@ -1700,9 +1717,14 @@ vncDesktop::CaptureMouse(BYTE *scrBuff, UINT scrBuffSize)
 	// Get the cursor position
 	if (!GetCursorPos(&CursorPos))
 		return;
-	//CursorPos.x -= m_ScreenOffsetx;
-	//CursorPos.y -= m_ScreenOffsety;
-	//vnclog.Print(LL_INTINFO, VNCLOG("CursorPos %i %i\n"),CursorPos.x, CursorPos.y);
+	RECT testrect;
+	testrect.top = m_Cliprect.tl.y;
+	testrect.bottom = m_Cliprect.br.y;
+	testrect.left = m_Cliprect.tl.x;
+	testrect.right = m_Cliprect.br.x;
+
+	if (!PtInRect(&testrect, CursorPos)) return;
+
 	// Translate position for hotspot
 	if (GetIconInfo(m_hcursor, &IconInfo))
 	{

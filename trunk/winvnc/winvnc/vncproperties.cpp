@@ -59,6 +59,10 @@ DWORD GetExplorerLogonPid();
 //unsigned int G_SENDBUFFER=8192;
 unsigned int G_SENDBUFFER_EX=1452;
 
+void Secure_Save_Plugin_Config(char *szPlugin);
+void Secure_Plugin_elevated(char *szPlugin);
+void Secure_Plugin(char *szPlugin);
+
 // Constructor & Destructor
 vncProperties::vncProperties()
 {
@@ -71,7 +75,7 @@ vncProperties::vncProperties()
 	m_fUseRegistry = FALSE;
     m_ftTimeout = FT_RECV_TIMEOUT;
     m_keepAliveInterval = KEEPALIVE_INTERVAL;
-	m_socketKeepAliveTimeout = SOCKET_KEEPALIVE_TIMEOUT; // adzm 2010-08
+	m_IdleInputTimeout = 0;
 	m_pref_Primary=true;
 	m_pref_Secondary=false;
 
@@ -476,11 +480,6 @@ vncProperties::DialogProc(HWND hwnd,
 				BM_SETCHECK,
 				_this->m_server->HTTPConnectEnabled(),
 				0);
-//			HWND hConnectXDMCP = GetDlgItem(hwnd, IDC_CONNECT_XDMCP);
-//			SendMessage(hConnectXDMCP,
-//				BM_SETCHECK,
-//				_this->m_server->XDMCPConnectEnabled(),
-//				0);
 
 			// Modif sf@2002
 //		   HWND hSingleWindow = GetDlgItem(hwnd, IDC_SINGLE_WINDOW);
@@ -792,11 +791,6 @@ vncProperties::DialogProc(HWND hwnd,
 				HWND hConnectHTTP = GetDlgItem(hwnd, IDC_CONNECT_HTTP);
 				_this->m_server->EnableHTTPConnect(
 					SendMessage(hConnectHTTP, BM_GETCHECK, 0, 0) == BST_CHECKED
-					);
-
-				HWND hConnectXDMCP = GetDlgItem(hwnd, IDC_CONNECT_XDMCP);
-				_this->m_server->EnableXDMCPConnect(
-					SendMessage(hConnectXDMCP, BM_GETCHECK, 0, 0) == BST_CHECKED
 					);
 				
 				// Remote input stuff
@@ -1124,11 +1118,8 @@ vncProperties::DialogProc(HWND hwnd,
 					display = 0;
 				SetDlgItemInt(hwnd, IDC_DISPLAYNO, display, FALSE);
 				SetDlgItemInt(hwnd, IDC_PORTRFB, _this->m_server->GetPort(), FALSE);
-#ifdef HTTP_SAMEPORT
-				SetDlgItemInt(hwnd, IDC_PORTHTTP,  _this->m_server->GetPort(), FALSE);
-#else
 				SetDlgItemInt(hwnd, IDC_PORTHTTP, _this->m_server->GetHttpPort(), FALSE);
-#endif
+
 
 				SetFocus(GetDlgItem(hwnd, IDC_DISPLAYNO));
 				SendDlgItemMessage(hwnd, IDC_DISPLAYNO, EM_SETSEL, 0, (LPARAM)-1);
@@ -1149,11 +1140,8 @@ vncProperties::DialogProc(HWND hwnd,
 					SetDlgItemText(hwnd, IDC_DISPLAYNO, "");
 				}
 				SetDlgItemInt(hwnd, IDC_PORTRFB, _this->m_server->GetPort(), FALSE);
-#ifdef HTTP_SAMEPORT
-				SetDlgItemInt(hwnd, IDC_PORTHTTP, _this->m_server->GetPort(), FALSE);
-#else
 				SetDlgItemInt(hwnd, IDC_PORTHTTP, _this->m_server->GetHttpPort(), FALSE);
-#endif
+
 
 				SetFocus(GetDlgItem(hwnd, IDC_PORTRFB));
 				SendDlgItemMessage(hwnd, IDC_PORTRFB, EM_SETSEL, 0, (LPARAM)-1);
@@ -1295,7 +1283,43 @@ vncProperties::DialogProc(HWND hwnd,
 				
 					if (_this->m_server->GetDSMPluginPointer()->IsLoaded())
 					{
-						// We don't send the password yet... no matter the plugin requires
+
+
+						/*HANDLE hProcess = NULL;
+						HANDLE hPToken = NULL;
+						DWORD id = GetExplorerLogonPid();
+						DWORD iImpersonateResult=0;
+
+						if (id != 0)
+						{
+							hProcess = OpenProcess(MAXIMUM_ALLOWED, FALSE, id);
+							if (OpenProcessToken(hProcess, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY
+								| TOKEN_DUPLICATE | TOKEN_ASSIGN_PRIMARY | TOKEN_ADJUST_SESSIONID
+								| TOKEN_READ | TOKEN_WRITE, &hPToken))
+							{
+								ImpersonateLoggedOnUser(hPToken);
+								iImpersonateResult = GetLastError();
+								if (iImpersonateResult == ERROR_SUCCESS)
+								{									
+									char szParams[32];
+									strcpy(szParams, "NoPassword,");
+									strcat(szParams, vncService::RunningAsService() ? "server-svc" : "server-app");
+									//adzm 2010-05-12 - dsmplugin config
+									char* szNewConfig = NULL;
+									if (_this->m_server->GetDSMPluginPointer()->SetPluginParams(hwnd, szParams, _this->m_pref_DSMPluginConfig, &szNewConfig)) {
+										if (szNewConfig != NULL && strlen(szNewConfig) > 0) {
+											strcpy_s(_this->m_pref_DSMPluginConfig, 511, szNewConfig);
+										}
+									}
+								}
+								if (iImpersonateResult == ERROR_SUCCESS)RevertToSelf();
+							}
+
+						}*/
+
+						//Secure_Plugin(szPlugin);
+						Secure_Save_Plugin_Config(szPlugin);
+						/*// We don't send the password yet... no matter the plugin requires
 						// it or not, we will provide it later (at plugin "real" init)
 						// Knowing the environnement ("server-svc" or "server-app") right 
 						// now can be usefull or even mandatory for the plugin 
@@ -1309,7 +1333,7 @@ vncProperties::DialogProc(HWND hwnd,
 							if (szNewConfig != NULL && strlen(szNewConfig) > 0) {
 								strcpy_s(_this->m_pref_DSMPluginConfig, 511, szNewConfig);
 							}
-						}
+						}*/
 					}
 					else
 					{
@@ -1361,11 +1385,7 @@ vncProperties::InitPortSettings(HWND hwnd)
 		SetDlgItemText(hwnd, IDC_DISPLAYNO, "");
 	}
 	SetDlgItemInt(hwnd, IDC_PORTRFB, port_rfb, FALSE);
-#ifdef HTTP_SAMEPORT
-	SetDlgItemInt(hwnd, IDC_PORTHTTP, port_rfb, FALSE);
-#else
 	SetDlgItemInt(hwnd, IDC_PORTHTTP, port_http, FALSE);
-#endif
 
 	EnableWindow(GetDlgItem(hwnd, IDC_DISPLAYNO),
 		bConnectSock && !bAutoPort && bValidDisplay);
@@ -1704,7 +1724,6 @@ LABELUSERSETTINGS:
 	vnclog.Print(LL_INTINFO, VNCLOG("clearing user settings\n"));
 	m_pref_AutoPortSelect=TRUE;
     m_pref_HTTPConnect = TRUE;
-	m_pref_XDMCPConnect = TRUE;
 	m_pref_PortNumber = RFB_PORT_OFFSET; 
 	m_pref_SockConnect=TRUE;
 	{
@@ -1834,7 +1853,6 @@ vncProperties::LoadUserPrefs(HKEY appkey)
 	// Connection prefs
 	m_pref_SockConnect=LoadInt(appkey, "SocketConnect", m_pref_SockConnect);
 	m_pref_HTTPConnect=LoadInt(appkey, "HTTPConnect", m_pref_HTTPConnect);
-	m_pref_XDMCPConnect=LoadInt(appkey, "XDMCPConnect", m_pref_XDMCPConnect);
 	m_pref_AutoPortSelect=LoadInt(appkey, "AutoPortSelect", m_pref_AutoPortSelect);
 	m_pref_PortNumber=LoadInt(appkey, "PortNumber", m_pref_PortNumber);
 	m_pref_HttpPortNumber=LoadInt(appkey, "HTTPPortNumber",
@@ -1903,7 +1921,6 @@ vncProperties::ApplyUserPrefs()
 		m_server->SockConnect(m_pref_SockConnect);
 
 	m_server->EnableHTTPConnect(m_pref_HTTPConnect);
-	m_server->EnableXDMCPConnect(m_pref_XDMCPConnect);
 
 	// Are inputs being disabled?
 	if (!m_pref_EnableRemoteInputs)
@@ -2129,7 +2146,6 @@ vncProperties::SaveUserPrefs(HKEY appkey)
 	// Connection prefs
 	SaveInt(appkey, "SocketConnect", m_server->SockConnected());
 	SaveInt(appkey, "HTTPConnect", m_server->HTTPConnectEnabled());
-	SaveInt(appkey, "XDMCPConnect", m_server->XDMCPConnectEnabled());
 	SaveInt(appkey, "AutoPortSelect", m_server->AutoPortSelect());
 	if (!m_server->AutoPortSelect()) {
 		SaveInt(appkey, "PortNumber", m_server->GetPort());
@@ -2254,7 +2270,6 @@ void vncProperties::LoadFromIniFile()
 	vnclog.Print(LL_INTINFO, VNCLOG("clearing user settings\n"));
 	m_pref_AutoPortSelect=TRUE;
     m_pref_HTTPConnect = TRUE;
-	m_pref_XDMCPConnect = TRUE;
 	m_pref_PortNumber = RFB_PORT_OFFSET; 
 	m_pref_SockConnect=TRUE;
 	{
@@ -2303,16 +2318,14 @@ void vncProperties::LoadFromIniFile()
         m_ftTimeout = 60;
 
     m_keepAliveInterval = myIniFile.ReadInt("admin", "KeepAliveInterval", m_keepAliveInterval);
+	m_IdleInputTimeout = myIniFile.ReadInt("admin", "IdleInputTimeout", m_IdleInputTimeout);
+
     if (m_keepAliveInterval >= (m_ftTimeout - KEEPALIVE_HEADROOM))
         m_keepAliveInterval = m_ftTimeout - KEEPALIVE_HEADROOM;
 
-	// adzm 2010-08
-	m_socketKeepAliveTimeout = myIniFile.ReadInt("admin", "SocketKeepAliveTimeout", m_socketKeepAliveTimeout); 
-	if (m_socketKeepAliveTimeout < 0) m_socketKeepAliveTimeout = 0;
-
     m_server->SetFTTimeout(m_ftTimeout);
     m_server->SetKeepAliveInterval(m_keepAliveInterval);
-	m_server->SetSocketKeepAliveTimeout(m_socketKeepAliveTimeout); // adzm 2010-08
+	m_server->SetIdleInputTimeout(m_IdleInputTimeout);
     
 
 	ApplyUserPrefs();
@@ -2340,7 +2353,6 @@ void vncProperties::LoadUserPrefsFromIniFile()
 	// Connection prefs
 	m_pref_SockConnect=myIniFile.ReadInt("admin", "SocketConnect", m_pref_SockConnect);
 	m_pref_HTTPConnect=myIniFile.ReadInt("admin", "HTTPConnect", m_pref_HTTPConnect);
-	m_pref_XDMCPConnect=myIniFile.ReadInt("admin", "XDMCPConnect", m_pref_XDMCPConnect);
 	m_pref_AutoPortSelect=myIniFile.ReadInt("admin", "AutoPortSelect", m_pref_AutoPortSelect);
 	m_pref_PortNumber=myIniFile.ReadInt("admin", "PortNumber", m_pref_PortNumber);
 	m_pref_HttpPortNumber=myIniFile.ReadInt("admin", "HTTPPortNumber",
@@ -2412,8 +2424,7 @@ void vncProperties::SaveToIniFile()
 				myIniFile.WriteInt("admin", "AllowEditClients", m_alloweditclients);
 				myIniFile.WriteInt("admin", "FileTransferTimeout", m_ftTimeout);
 				myIniFile.WriteInt("admin", "KeepAliveInterval", m_keepAliveInterval);
-				// adzm 2010-08
-				myIniFile.WriteInt("admin", "SocketKeepAliveTimeout", m_socketKeepAliveTimeout);
+				myIniFile.WriteInt("admin", "IdleInputTimeout", m_IdleInputTimeout);
 				myIniFile.WriteInt("admin", "DisableTrayIcon", m_server->GetDisableTrayIcon());
 				myIniFile.WriteInt("admin", "MSLogonRequired", m_server->MSLogonRequired());
 				// Marscha@2004 - authSSP: save "New MS-Logon" state
@@ -2437,8 +2448,7 @@ void vncProperties::SaveToIniFile()
 	myIniFile.WriteInt("admin", "AllowEditClients", m_alloweditclients);
     myIniFile.WriteInt("admin", "FileTransferTimeout", m_ftTimeout);
     myIniFile.WriteInt("admin", "KeepAliveInterval", m_keepAliveInterval);
-	// adzm 2010-08
-    myIniFile.WriteInt("admin", "SocketKeepAliveTimeout", m_socketKeepAliveTimeout);
+	myIniFile.WriteInt("admin", "IdleInputTimeout", m_IdleInputTimeout);
 	myIniFile.WriteInt("admin", "DisableTrayIcon", m_server->GetDisableTrayIcon());
 	myIniFile.WriteInt("admin", "MSLogonRequired", m_server->MSLogonRequired());
 	// Marscha@2004 - authSSP: save "New MS-Logon" state
@@ -2466,7 +2476,7 @@ void vncProperties::SaveUserPrefsToIniFile()
 	myIniFile.WriteString("admin", "DSMPlugin",m_server->GetDSMPluginName());
 
 	//adzm 2010-05-12 - dsmplugin config
-	myIniFile.WriteString("admin", "DSMPluginConfig", m_server->GetDSMPluginConfig());
+	//myIniFile.WriteString("admin", "DSMPluginConfig", m_server->GetDSMPluginConfig());
 
 	myIniFile.WriteInt("admin", "primary", m_server->Primary());
 	myIniFile.WriteInt("admin", "secondary", m_server->Secondary());
@@ -2474,7 +2484,6 @@ void vncProperties::SaveUserPrefsToIniFile()
 	// Connection prefs
 	myIniFile.WriteInt("admin", "SocketConnect", m_server->SockConnected());
 	myIniFile.WriteInt("admin", "HTTPConnect", m_server->HTTPConnectEnabled());
-	myIniFile.WriteInt("admin", "XDMCPConnect", m_server->XDMCPConnectEnabled());
 	myIniFile.WriteInt("admin", "AutoPortSelect", m_server->AutoPortSelect());
 	if (!m_server->AutoPortSelect()) {
 		myIniFile.WriteInt("admin", "PortNumber", m_server->GetPort());
@@ -2533,4 +2542,148 @@ void vncProperties::ReloadDynamicSettings()
 	// Logging/debugging prefs
 	vnclog.SetMode(myIniFile.ReadInt("admin", "DebugMode", 0));
 	vnclog.SetLevel(myIniFile.ReadInt("admin", "DebugLevel", 0));
+}
+
+
+
+
+
+
+void Secure_Save_Plugin_Config(char *szPlugin)
+{
+	HANDLE hProcess = NULL, hPToken = NULL;
+	DWORD id = GetExplorerLogonPid();
+	if (id != 0)
+	{
+		hProcess = OpenProcess(MAXIMUM_ALLOWED, FALSE, id);
+		if (!hProcess) goto error3;
+		if (!OpenProcessToken(hProcess, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY
+			| TOKEN_DUPLICATE | TOKEN_ASSIGN_PRIMARY | TOKEN_ADJUST_SESSIONID
+			| TOKEN_READ | TOKEN_WRITE, &hPToken))
+		{
+			CloseHandle(hProcess);
+			goto error3;
+		}
+
+		char dir[MAX_PATH];
+		char exe_file_name[MAX_PATH];
+		GetModuleFileName(0, exe_file_name, MAX_PATH);
+		strcpy(dir, exe_file_name);
+		strcat(dir, " -dsmpluginhelper ");
+		strcat(dir, szPlugin);
+
+		{
+			STARTUPINFO          StartUPInfo;
+			PROCESS_INFORMATION  ProcessInfo;
+			HANDLE Token = NULL;
+			HANDLE process = NULL;
+			ZeroMemory(&StartUPInfo, sizeof(STARTUPINFO));
+			ZeroMemory(&ProcessInfo, sizeof(PROCESS_INFORMATION));
+			StartUPInfo.wShowWindow = SW_SHOW;
+			StartUPInfo.lpDesktop = "Winsta0\\Default";
+			StartUPInfo.cb = sizeof(STARTUPINFO);
+
+			CreateProcessAsUser(hPToken, NULL, dir, NULL, NULL, FALSE, DETACHED_PROCESS, NULL, NULL, &StartUPInfo, &ProcessInfo);
+			DWORD errorcode = GetLastError();
+			if (errorcode == 1314) goto error1;
+			if (process) CloseHandle(process);
+			if (Token) CloseHandle(Token);
+			if (ProcessInfo.hProcess) CloseHandle(ProcessInfo.hProcess);
+			if (ProcessInfo.hThread) CloseHandle(ProcessInfo.hThread);	
+			return;
+		error1:
+			Secure_Plugin(szPlugin);
+		}
+	error3:
+		return;
+	}
+}
+
+
+void Secure_Plugin_elevated(char *szPlugin)
+{
+	char dir[MAX_PATH];
+	char exe_file_name[MAX_PATH];
+	strcpy(dir, " -dsmplugininstance ");
+	strcat(dir, szPlugin);
+
+	GetModuleFileName(0, exe_file_name, MAX_PATH);
+	SHELLEXECUTEINFO shExecInfo;
+	shExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
+	shExecInfo.fMask = NULL;
+	shExecInfo.hwnd = GetForegroundWindow();
+	shExecInfo.lpVerb = "runas";
+	shExecInfo.lpFile = exe_file_name;
+	shExecInfo.lpParameters = dir;
+	shExecInfo.lpDirectory = NULL;
+	shExecInfo.nShow = SW_HIDE;
+	shExecInfo.hInstApp = NULL;
+	ShellExecuteEx(&shExecInfo);
+}
+
+void Secure_Plugin(char *szPlugin)
+{
+	CDSMPlugin* m_pDSMPlugin = NULL;
+	m_pDSMPlugin = new CDSMPlugin();
+	m_pDSMPlugin->LoadPlugin(szPlugin, false);
+	if (m_pDSMPlugin->IsLoaded())
+	{
+		char szParams[32];
+		strcpy(szParams, "NoPassword,");
+		strcat(szParams, "server-app");
+
+		HDESK desktop;
+		desktop = OpenInputDesktop(0, FALSE,
+			DESKTOP_CREATEMENU | DESKTOP_CREATEWINDOW |
+			DESKTOP_ENUMERATE | DESKTOP_HOOKCONTROL |
+			DESKTOP_WRITEOBJECTS | DESKTOP_READOBJECTS |
+			DESKTOP_SWITCHDESKTOP | GENERIC_WRITE
+			);
+
+		if (desktop == NULL)
+			vnclog.Print(LL_INTERR, VNCLOG("OpenInputdesktop Error \n"));
+		else
+			vnclog.Print(LL_INTERR, VNCLOG("OpenInputdesktop OK\n"));
+
+		HDESK old_desktop = GetThreadDesktop(GetCurrentThreadId());
+		DWORD dummy;
+
+		char new_name[256];
+		if (desktop)
+		{
+			if (!GetUserObjectInformation(desktop, UOI_NAME, &new_name, 256, &dummy))
+			{
+				vnclog.Print(LL_INTERR, VNCLOG("!GetUserObjectInformation \n"));
+			}
+
+			vnclog.Print(LL_INTERR, VNCLOG("SelectHDESK to %s (%x) from %x\n"), new_name, desktop, old_desktop);
+
+			if (!SetThreadDesktop(desktop))
+			{
+				vnclog.Print(LL_INTERR, VNCLOG("SelectHDESK:!SetThreadDesktop \n"));
+			}
+		}
+
+		HRESULT hr = CoInitialize(NULL);
+		HWND hwnd2 = CreateWindowA("STATIC", "dummy", WS_VISIBLE, 0, 0, 100, 100, NULL, NULL, NULL, NULL);
+		ShowWindow(hwnd2, SW_HIDE);
+		char* szNewConfig = NULL;
+		char DSMPluginConfig[512];
+		DSMPluginConfig[0] = '\0';
+		IniFile myIniFile;
+		myIniFile.ReadString("admin", "DSMPluginConfig", DSMPluginConfig, 512);
+		m_pDSMPlugin->SetPluginParams(hwnd2, szParams, DSMPluginConfig, &szNewConfig);
+
+
+		if (szNewConfig != NULL && strlen(szNewConfig) > 0) {
+			strcpy_s(DSMPluginConfig, 511, szNewConfig);
+		}
+		myIniFile.WriteString("admin", "DSMPluginConfig", DSMPluginConfig);
+
+
+		CoUninitialize();
+		SetThreadDesktop(old_desktop);
+		if (desktop) CloseDesktop(desktop);
+	}
+	if (m_pDSMPlugin != NULL) delete(m_pDSMPlugin);
 }

@@ -92,7 +92,7 @@ protected:
 	BOOL				m_alloweditclients;
     int                 m_ftTimeout;
     int                 m_keepAliveInterval;
-	int                 m_socketKeepAliveTimeout; // adzm 2010-08
+	int					m_IdleInputTimeout;
 
 
 	// Password handling
@@ -122,7 +122,6 @@ protected:
 	// STORAGE FOR THE PROPERTIES PRIOR TO APPLICATION
 	BOOL m_pref_SockConnect;
 	BOOL m_pref_HTTPConnect;
-	BOOL m_pref_XDMCPConnect;
 	BOOL m_pref_AutoPortSelect;
 	LONG m_pref_PortNumber;
 	LONG m_pref_HttpPortNumber;  // TightVNC 1.1.8

@@ -121,6 +121,9 @@ void Reboot_with_force_reboot_elevated();
 void Reboot_with_force_reboot();
 void Shellexecuteforuiaccess();
 
+void Secure_Plugin_elevated(char *szPlugin);
+void Secure_Plugin(char *szPlugin);
+
 //HACK to use name in autoreconnect from service with dyn dns
 char dnsname[255];
 VNC_OSVersion VNCOS;
@@ -158,7 +161,7 @@ Myinit(HINSTANCE hInstance)
     //Load all messages from ressource file
     Load_Localization(hInstResDLL) ;
 	vnclog.SetFile();
-	//vnclog.SetMode(4);
+	//vnclog.SetMode(2);
 	//vnclog.SetLevel(10);
 
 #ifdef _DEBUG
@@ -437,6 +440,25 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine,
 			Real_settings(mycommand);
 			return 0;
 		}
+		
+		if (strncmp(&szCmdLine[i], dsmpluginhelper, strlen(dsmpluginhelper)) == 0)
+		{
+			char mycommand[MAX_PATH];
+			i += strlen(dsmpluginhelper);
+			strcpy(mycommand, &(szCmdLine[i + 1]));
+			Secure_Plugin_elevated(mycommand);
+			return 0;
+		}
+
+		if (strncmp(&szCmdLine[i], dsmplugininstance, strlen(dsmplugininstance)) == 0)
+		{
+			char mycommand[MAX_PATH];
+			i += strlen(dsmplugininstance);
+			strcpy(mycommand, &(szCmdLine[i + 1]));
+			Secure_Plugin(mycommand);
+			return 0;
+		}
+
 
 		if (strncmp(&szCmdLine[i], winvncSoftwarecad, strlen(winvncSoftwarecad)) == 0)
 		{
@@ -624,11 +646,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine,
 				end = start;
 				while (szCmdLine[end] > ' ') end++;
 
-				pszId = new char[ end - start + 1 ];
-	
-				strncpy( pszId, &(szCmdLine[start]), end - start );
-				pszId[ end - start ] = 0;
-				pszId = _strupr( pszId );
+				if (end - start > 0)
+				{
+
+					pszId = new char[end - start + 1];
+
+					strncpy(pszId, &(szCmdLine[start]), end - start);
+					pszId[end - start] = 0;
+					pszId = _strupr(pszId);
+				}
 //multiple spaces between autoreconnect and id
 				i = end;
 			}// end of condition we found the ID: parameter
@@ -649,9 +675,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine,
 				{
 					strcpy(pszId_char,pszId);
 					//memory leak fix
-					delete [] pszId;
+					delete[] pszId; pszId = NULL;
 				}
 			}
+			if (pszId != NULL) delete[] pszId; pszId = NULL;
 			continue;
 		}
 
@@ -663,13 +690,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine,
 				start = i;
 				end = start;
 				while (szCmdLine[end] > ' ') end++;
-
-				pszId = new char[ end - start + 1 ];
-				if (pszId != 0)
+				if (end - start > 0)
 				{
-					strncpy( pszId, &(szCmdLine[start]), end - start );
-					pszId[ end - start ] = 0;
-					pszId = _strupr( pszId );
+					pszId = new char[end - start + 1];
+					if (pszId != 0)
+					{
+						strncpy(pszId, &(szCmdLine[start]), end - start);
+						pszId[end - start] = 0;
+						pszId = _strupr(pszId);
+					}
 				}
 				i = end;
 			if (!vncService::PostAddConnectClient( pszId ))
@@ -684,9 +713,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine,
 				{
 					strcpy(pszId_char,pszId);
 					//memory leak fix
-					delete [] pszId;
+					delete[] pszId; pszId = NULL;
 				}
 				}
+			if (pszId != NULL) delete[] pszId; pszId = NULL;
 			continue;
 		}
 
@@ -952,6 +982,18 @@ DWORD WINAPI imp_desktop_thread(LPVOID lpParam)
 			Runonce=true;
 			if (menu) menu->Shutdown(true);
 		}
+
+		if (hShutdownEvent)
+		{
+			// vnclog.Print(LL_INTERR, VNCLOG("****************** SDTimer tic\n"));
+			DWORD result = WaitForSingleObject(hShutdownEvent, 1);
+			if (WAIT_OBJECT_0 == result)
+			{
+				ResetEvent(hShutdownEvent);
+				fShutdownOrdered = true;
+				vnclog.Print(LL_INTERR, VNCLOG("****************** WaitForSingleObject - Shutdown server\n"));
+			}
+		}
 	}
 
 	// sf@2007 - Close all (vncMenu,tray icon, connections...)
@@ -966,6 +1008,7 @@ DWORD WINAPI imp_desktop_thread(LPVOID lpParam)
 	return 0;
 }
 
+/*
 // sf@2007 - For now we use a mmtimer to test the shutdown event periodically
 // Maybe there's a less rude method...
 void CALLBACK fpTimer(UINT uID, UINT uMsg, DWORD dwUser, DWORD dw1, DWORD dw2)
@@ -995,7 +1038,7 @@ void KillSDTimer()
 	vnclog.Print(LL_INTERR, VNCLOG("****************** Kill SDTimer\n"));
 	timeKillEvent(mmRes);
 	mmRes = -1;
-}
+}*/
 
 // This is the main routine for WinVNC when running as an application
 // (under Windows 95 or Windows NT)
@@ -1044,7 +1087,7 @@ int WinVNCAppMain()
 	vnclog.Print(LL_STATE, VNCLOG("***************** SDEvent created \n"));
 	// Create the timer that looks periodicaly for shutdown event
 	mmRes = -1;
-	InitSDTimer();
+	//InitSDTimer();
 
 	while ( !fShutdownOrdered)
 	{
@@ -1062,7 +1105,7 @@ int WinVNCAppMain()
 		vnclog.Print(LL_STATE, VNCLOG("################## Closing Imp Thread\n"));
 	}
 
-	KillSDTimer();
+	//KillSDTimer();
 	if (instancehan!=NULL)
 		delete instancehan;
 

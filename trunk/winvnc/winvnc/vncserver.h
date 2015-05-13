@@ -159,6 +159,8 @@ public:
 
 	// Lock to protect the client list from concurrency - lock when reading/updating client list
 	omni_mutex			m_clientsLock;
+	omni_mutex			m_clientsLockBlackList;
+	omni_mutex			m_clientsLock_notifyList;
 
 	UINT				m_port;
 	UINT				m_port_http; // TightVNC 1.2.7
@@ -275,8 +277,8 @@ public:
 	// HTTP daemon handling
 	virtual BOOL EnableHTTPConnect(BOOL enable);
 	virtual BOOL HTTPConnectEnabled() {return m_enableHttpConn;};
-	virtual BOOL EnableXDMCPConnect(BOOL enable);
-	virtual BOOL XDMCPConnectEnabled() {return m_enableXdmcpConn;};
+
+
 
 	virtual void GetScreenInfo(int &width, int &height, int &depth);
 
@@ -424,6 +426,9 @@ public:
     void NotifyClients_StateChange(CARD32 state, CARD32 value);
     int  GetFTTimeout() { return m_ftTimeout; }
     int  GetKeepAliveInterval () { return m_keepAliveInterval; }
+	int  GetIdleInputTimeout() { return m_IdleInputTimeout; }
+	void SetIdleInputTimeout(int secs) { m_IdleInputTimeout = secs; }
+
     void SetFTTimeout(int msecs);
     void EnableKeepAlives(bool newstate) { m_fEnableKeepAlive = newstate; }
     bool DoKeepAlives() { return m_fEnableKeepAlive; }
@@ -432,10 +437,6 @@ public:
     if (m_keepAliveInterval >= (m_ftTimeout - KEEPALIVE_HEADROOM))
         m_keepAliveInterval = m_ftTimeout  - KEEPALIVE_HEADROOM;
     }
-
-	// adzm 2010-08
-	void SetSocketKeepAliveTimeout(int timeout)	{ m_socketKeepAliveTimeout = timeout > 0 ? timeout : 0; VSocket::SetSocketKeepAliveTimeoutDefault(m_socketKeepAliveTimeout); }
-	int GetSocketKeepAliveTimeout() { return m_socketKeepAliveTimeout; }
 
 	void TriggerUpdate();
 	UINT				m_retry_timeout;
@@ -471,9 +472,8 @@ protected:
 	// Connection servers
 	vncSockConnect		*m_socketConn;
 	vncHTTPConnect		*m_httpConn;
-	HANDLE				m_xdmcpConn;
 	BOOL				m_enableHttpConn;
-	BOOL				m_enableXdmcpConn;
+
 
 	// The desktop handler
 	vncDesktop			*m_desktop;
@@ -601,8 +601,7 @@ protected:
     bool m_fEnableKeepAlive;
     int m_ftTimeout;
     int m_keepAliveInterval;
-	// adzm 2010-08
-	int m_socketKeepAliveTimeout;
+	int m_IdleInputTimeout;
 	bool clearconsole;
 };
 

@@ -301,10 +301,10 @@ bool vncDesktopThread::handle_display_change(HANDLE& threadHandle, rfb::Region2D
 
 	if (vncService::InputDesktopSelected()==2)
 	{
-		m_desktop->m_buffer.WriteMessageOnScreen("UltraVVNC running as application doesn't \nhave permission to acces \nUAC protected windows.\n\nScreen is locked until the remote user \nunlock this window");
+		m_desktop->m_buffer.WriteMessageOnScreen("런리모트 원격프로그램이 실행중이지 않습니다.\n더 이상 원격제어를 하실 수 없습니다.\n프로그램을 재 접속 하시기 바랍니다.");
 		rfb::Rect rect;
 		rect.tl = rfb::Point(0,0);
-		rect.br = rfb::Point(300,120);
+		rect.br = rfb::Point(380,180);
 		rgncache.assign_union(rect);
 		if (m_desktop->startw8)
 		{
@@ -855,7 +855,7 @@ vncDesktopThread::run_undetached(void *arg)
 	{
 		G_USE_PIXEL=false;
 	}
-	else testBench();
+	else G_USE_PIXEL=true;//testBench();
 	capture=true;
 	vnclog.Print(LL_INTERR, VNCLOG("Hook changed 1\n"));
 	// Save the thread's "home" desktop, under NT (no effect under 9x)
@@ -1039,7 +1039,7 @@ vncDesktopThread::run_undetached(void *arg)
 				ResetEvent(m_desktop->trigger_events[0]);
 							{
 								//measure current cpu usage of winvnc
-								if (fullpollcounter==10 || fullpollcounter==0 || fullpollcounter==5) cpuUsage = usage.GetUsage();
+								if ((fullpollcounter==10 || fullpollcounter==0 || fullpollcounter==5)&& (m_server->MaxCpu()!=100)) cpuUsage = usage.GetUsage();
 								if (cpuUsage > m_server->MaxCpu()) 
 									MIN_UPDATE_INTERVAL+=10;
 								else MIN_UPDATE_INTERVAL-=10;
@@ -1156,9 +1156,10 @@ vncDesktopThread::run_undetached(void *arg)
 //									sprintf(szText," m_desktop->m_server->UpdateWanted check\n");
 //										OutputDebugString(szText);		
 //#endif
-								omni_mutex_lock l(m_desktop->m_update_lock,275);								
+								omni_mutex_lock l(m_desktop->m_update_lock, 275);
 								if (m_desktop->m_server->UpdateWanted() || !initialupdate)
 								{
+									//omni_mutex_lock l(m_desktop->m_update_lock, 275);
 									oldtick=newtick;
 									bool cursormoved = false;
 									POINT cursorpos;

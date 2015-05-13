@@ -296,14 +296,14 @@
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'" />
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugDll|x64'">C:\Program Files\Intel\IPP\5.3.4.087\em64t\include;$(IncludePath)</IncludePath>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugDll|Win32'">C:\Program Files (x86)\Intel\IPP\5.3.4.087\ia32\include;C:\Program Files (x86)\Visual Leak Detector\src;C:\Program Files (x86)\Microsoft DirectX SDK (March 2009)\Include;$(IncludePath)</IncludePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugDll|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath);D:\vnc\trunk\nsam_build_exe</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugDll|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugDll|x64'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugDll-Static|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath);D:\vnc\trunk\nsam_build_exe</ExecutablePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugLib|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;D:\vnc\trunk\nsam_build_exe;$(ExecutablePath);D:\vnc\trunk\nsam_build_exe</ExecutablePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseDll-Static|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath);D:\vnc\trunk\nsam_build_exe</ExecutablePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseDll|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath);D:\vnc\trunk\nsam_build_exe</ExecutablePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseLib-Static|Win32'">C:\Program Files %28x86%29\nasm;D:\nsam;$(ExecutablePath);D:\vnc\trunk\nsam_build_exe</ExecutablePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath);D:\vnc\trunk\nsam_build_exe</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugDll-Static|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugLib|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseDll-Static|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseDll|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseLib-Static|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugDll-Static|x64'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugLib-Static|x64'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugLib|x64'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
@@ -311,7 +311,7 @@
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseDll|x64'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseLib-Static|x64'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='ReleaseLib|x64'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
-    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugLib-Static|Win32'">C:\Program Files %28x86%29\nasm;D:\nsam;D:\vnc\trunk\nsam_build_exe;$(ExecutablePath);D:\vnc\trunk\nsam_build_exe</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='DebugLib-Static|Win32'">C:\Program Files %28x86%29\nasm;C:\Program Files\nasm;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLib|Win32'">
     <ClCompile>

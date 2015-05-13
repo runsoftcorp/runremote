@@ -161,32 +161,32 @@ static LRESULT CALLBACK WndProc(
 {
     switch (uMsg)
     {
-						case WM_CREATE:
+			case WM_CREATE:
 //							SetTimer(hwnd,10,30000,NULL);
-							SetTimer(hwnd,100,20,NULL);
-							break;
-						case WM_TIMER:
-							if (wParam==100) 
-							{
-                                SetWindowPos(hwnd,HWND_TOPMOST,0,0,0,0, SWP_NOMOVE|SWP_NOSIZE|SWP_NOACTIVATE);
+				SetTimer(hwnd,100,20,NULL);
+				break;
+			case WM_TIMER:
+				if (wParam==100) 
+				{
+                    SetWindowPos(hwnd,HWND_TOPMOST,0,0,0,0, SWP_NOMOVE|SWP_NOSIZE|SWP_NOACTIVATE);
 							
-							}
+				}
 //							if (wParam==10) DestroyWindow(hwnd);
                          
-						 case WM_ERASEBKGND:
-							{
-									DoSDKEraseBkGnd2((HDC)wParam, RGB(0,0,0));
-									return true;
-							}
-						case WM_CTLCOLORSTATIC:
-							{
-									SetBkMode((HDC) wParam, TRANSPARENT);
-									return (LONG_PTR) GetStockObject(NULL_BRUSH);
-							}
-                         case WM_DESTROY:
-								KillTimer(hwnd,100);
-                                PostQuitMessage (0);
-                                break;
+				case WM_ERASEBKGND:
+				{
+						DoSDKEraseBkGnd2((HDC)wParam, RGB(0,0,0));
+						return true;
+				}
+			case WM_CTLCOLORSTATIC:
+				{
+						SetBkMode((HDC) wParam, TRANSPARENT);
+						return (LONG_PTR) GetStockObject(NULL_BRUSH);
+				}
+                case WM_DESTROY:
+					KillTimer(hwnd,100);
+                    PostQuitMessage (0);
+                    break;
         default:
             return DefWindowProc(hwnd, uMsg, wParam, lParam);
     }

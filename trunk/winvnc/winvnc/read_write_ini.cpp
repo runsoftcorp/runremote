@@ -61,11 +61,11 @@ LONG DefaultScale=1;
 
 LONG SocketConnect=1;
 LONG HTTPConnect;
-LONG XDMCPConnect;
 LONG AutoPortSelect=1;
 LONG PortNumber=5900;
 LONG HttpPortNumber=5800;
 LONG IdleTimeout=0;
+LONG IdleInputTimeout = 0;
 
 LONG RemoveWallpaper=0;
 LONG RemoveAero=0;
@@ -100,6 +100,9 @@ LONG FTTimeout = 30;
 char path[512];
 char accept_reject_mesg[512];
 LONG MaxCpu=40;
+
+char DSMPluginConfig[512];
+*DSMPluginConfig = '\0';
 
 LONG Primary=1;
 LONG Secondary=0;
@@ -150,11 +153,13 @@ myIniFile_Out.WriteInt("admin", "DisableTrayIcon", DisableTrayIcon);
 myIniFile_Out.WriteInt("admin", "LoopbackOnly", LoopbackOnly);
 
 UseDSMPlugin=myIniFile_In.ReadInt("admin", "UseDSMPlugin", false);
+myIniFile_In.ReadString("admin", "DSMPluginConfig", DSMPluginConfig, 512);
 AllowLoopback=myIniFile_In.ReadInt("admin", "AllowLoopback", true);
 AuthRequired=myIniFile_In.ReadInt("admin", "AuthRequired", true);
 ConnectPriority=myIniFile_In.ReadInt("admin", "ConnectPriority", 0);
 
 myIniFile_Out.WriteInt("admin", "UseDSMPlugin", UseDSMPlugin);
+myIniFile_Out.WriteString("admin", "DSMPluginConfig", DSMPluginConfig);
 myIniFile_Out.WriteInt("admin", "AllowLoopback", AllowLoopback);
 myIniFile_Out.WriteInt("admin", "AuthRequired", AuthRequired);
 myIniFile_Out.WriteInt("admin", "ConnectPriority", ConnectPriority);
@@ -195,18 +200,18 @@ myIniFile_Out.WriteInt("admin", "secondary", Secondary);
 	// Connection prefs
 SocketConnect=myIniFile_In.ReadInt("admin", "SocketConnect", true);
 HTTPConnect=myIniFile_In.ReadInt("admin", "HTTPConnect", true);
-XDMCPConnect=myIniFile_In.ReadInt("admin", "XDMCPConnect", true);
 AutoPortSelect=myIniFile_In.ReadInt("admin", "AutoPortSelect", true);
 PortNumber=myIniFile_In.ReadInt("admin", "PortNumber", PortNumber);
 HttpPortNumber=myIniFile_In.ReadInt("admin", "HTTPPortNumber",HttpPortNumber);
 IdleTimeout=myIniFile_In.ReadInt("admin", "IdleTimeout", IdleTimeout);
+IdleInputTimeout = myIniFile_In.ReadInt("admin", "IdleInputTimeout", IdleInputTimeout);
 myIniFile_Out.WriteInt("admin", "SocketConnect", SocketConnect);
 myIniFile_Out.WriteInt("admin", "HTTPConnect", HTTPConnect);
-myIniFile_Out.WriteInt("admin", "XDMCPConnect", XDMCPConnect);
 myIniFile_Out.WriteInt("admin", "AutoPortSelect", AutoPortSelect);
 myIniFile_Out.WriteInt("admin", "PortNumber", PortNumber);
 myIniFile_Out.WriteInt("admin", "HTTPPortNumber", HttpPortNumber);
 myIniFile_Out.WriteInt("admin", "IdleTimeout", IdleTimeout);
+myIniFile_Out.WriteInt("admin", "IdleInputTimeout", IdleInputTimeout);
 
 RemoveWallpaper=myIniFile_In.ReadInt("admin", "RemoveWallpaper", RemoveWallpaper);
 RemoveAero=myIniFile_In.ReadInt("admin", "RemoveAero", RemoveAero);

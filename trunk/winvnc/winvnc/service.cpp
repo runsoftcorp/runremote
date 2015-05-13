@@ -199,15 +199,15 @@ BOOL CreateRemoteSessionProcess(
                 hNamedPipe = CreateFileW(szNamedPipeName, GENERIC_READ|GENERIC_WRITE,0, NULL, OPEN_EXISTING, 0, 0);
                 if(hNamedPipe == INVALID_HANDLE_VALUE)
                 {
-                    if(GetLastError() == ERROR_PIPE_BUSY)
-                    {
-                            if(!WaitNamedPipeW(szNamedPipeName, 30000))
-                                    return FALSE;
-                    }
-                    else
-                    {
-                            return FALSE;
-                    }
+                        if(GetLastError() == ERROR_PIPE_BUSY)
+                        {
+                                if(!WaitNamedPipeW(szNamedPipeName, 30000))
+                                        return FALSE;
+                        }
+                        else
+                        {
+                                return FALSE;
+                        }
                 }
         }while(hNamedPipe == INVALID_HANDLE_VALUE);
 

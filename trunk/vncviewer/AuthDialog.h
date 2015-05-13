@@ -1,10 +1,7 @@
-//  Copyright (C) 2002 UltraVNC Team Members. All Rights Reserved.
+/////////////////////////////////////////////////////////////////////////////
+//  Copyright (C) 2002-2013 UltraVNC Team Members. All Rights Reserved.
 //
-//  Copyright (C) 1999 AT&T Laboratories Cambridge. All Rights Reserved.
-//
-//  This file is part of the VNC system.
-//
-//  The VNC system is free software; you can redistribute it and/or modify
+//  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation; either version 2 of the License, or
 //  (at your option) any later version.
@@ -19,9 +16,12 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,
 //  USA.
 //
-// If the source code for the VNC system is not available from the place 
-// whence you received this file, check http://www.uk.research.att.com/vnc or contact
-// the authors on vnc@uk.research.att.com for information on obtaining it.
+// If the source code for the program is not available from the place from
+// which you received this file, check 
+// http://www.uvnc.com/
+//
+////////////////////////////////////////////////////////////////////////////
+ 
 
 
 
@@ -32,7 +32,7 @@ class AuthDialog
 public:
 	AuthDialog();
 	virtual ~AuthDialog();
-	int DoDialog(bool ms_logon, bool isSecure = false,bool warning = false);
+	int DoDialog(bool ms_logon, TCHAR IN_host[MAX_HOST_NAME_LEN], int IN_port, bool isSecure = false, bool warning = false);
 	TCHAR m_passwd[256];
 	TCHAR m_domain[256];
 	TCHAR m_user[256];
@@ -44,4 +44,6 @@ public:
 	
 	//adzm 2010-05-12 - passphrase
 	bool m_bPassphraseMode;
+	TCHAR _host[MAX_HOST_NAME_LEN];
+	int _port;
 };

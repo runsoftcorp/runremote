@@ -18,7 +18,7 @@
 //  USA.
 //
 // If the source code for the VNC system is not available from the place 
-// whence you received this file, check http://www.uk.research.att.com/vnc or 
+// whence you received this file, check http://www.uvnc.com or 
 // contact the authors on vnc@uk.research.att.com for information on obtaining it.
 //
 // Many thanks to Greg Hewgill <greg@hewgill.com> for providing the basis for 
@@ -69,16 +69,31 @@ void ClientConnection::SetFullScreenMode(bool enable)
 
 // If the options have been changed other than by calling 
 // SetFullScreenMode, you need to call this to make it happen.
+void ofnInit();
 void ClientConnection::RealiseFullScreenMode()
 {
+	vnclog.Print(3, "ClientConnection::RealiseFullScreenMode()\n");
+
 	LONG style = GetWindowLong(m_hwndMain, GWL_STYLE);
 	if (m_opts.m_FullScreen) {
 
 		// A bit crude here - we can skip the prompt on a registry setting.
 		// We'll do this properly later.
-		HKEY hRegKey;
 		DWORD skipprompt = 0;
-		if ( RegCreateKey(HKEY_CURRENT_USER, SETTINGS_KEY_NAME, &hRegKey)  != ERROR_SUCCESS ) {
+
+		{
+			char fname[_MAX_PATH];
+			ofnInit();
+			char optionfile[MAX_PATH];
+			VNCOptions::GetDefaultOptionsFileName(optionfile);
+			sprintf(fname, optionfile);
+			vnclog.Print(1, "Saving to %s\n", fname);
+			skipprompt = 0;
+			skipprompt = GetPrivateProfileInt("connection", "SkipFullScreenPrompt", skipprompt, fname);
+		}
+
+
+		/*if ( RegCreateKey(HKEY_CURRENT_USER, SETTINGS_KEY_NAME, &hRegKey)  != ERROR_SUCCESS ) {
 	        hRegKey = NULL;
 		} else {
 			DWORD skippromptsize = sizeof(skipprompt);
@@ -88,7 +103,7 @@ void ClientConnection::RealiseFullScreenMode()
 				skipprompt = 0;
 			}
 			RegCloseKey(hRegKey);
-		}
+		}*/
 		
 		skipprompt = 1; //sf@2004 - This prompt isn't needed any more now that we have
 						// the fullscreen title bar :) Thanks Lars !

@@ -1,14 +1,7 @@
-//  Copyright (C) 2002 UltraVNC Team Members. All Rights Reserved.
+/////////////////////////////////////////////////////////////////////////////
+//  Copyright (C) 2002-2013 UltraVNC Team Members. All Rights Reserved.
 //
-//  Copyright (C) 2000-2002 Const Kaplinsky. All Rights Reserved.
-//
-//  Copyright (C) 2002 RealVNC Ltd. All Rights Reserved.
-//
-//  Copyright (C) 1999 AT&T Laboratories Cambridge. All Rights Reserved.
-//
-//  This file is part of the VNC system.
-//
-//  The VNC system is free software; you can redistribute it and/or modify
+//  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation; either version 2 of the License, or
 //  (at your option) any later version.
@@ -23,16 +16,11 @@
 //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,
 //  USA.
 //
-// If the source code for the VNC system is not available from the place
-// whence you received this file, check http://www.uk.research.att.com/vnc or contact
-// the authors on vnc@uk.research.att.com for information on obtaining it.
-
-// Many thanks to Randy Brown <rgb@inven.com> for providing the 3-button
-// emulation code.
-
-// This is the main source for a ClientConnection object.
-// It handles almost everything to do with a connection to a server.
-// The decoding of specific rectangle encodings is done in separate files.
+// If the source code for the program is not available from the place from
+// which you received this file, check 
+// http://www.uvnc.com/
+//
+////////////////////////////////////////////////////////////////////////////
 
 #define _WIN32_WINDOWS 0x0410
 #define WINVER 0x0400
@@ -40,6 +28,7 @@
 #include "stdhdrs.h"
 
 #include "vncviewer.h"
+#include "Wingdi.h"
 
 #ifdef UNDER_CE
 #include "omnithreadce.h"
@@ -314,7 +303,7 @@ void ClientConnection::Init(VNCviewerApp *pApp)
 	// adzm - 2010-07 - Fix clipboard hangs
 	m_hwndNextViewer = (HWND)INVALID_HANDLE_VALUE;
 	m_pApp = pApp;
-	m_dormant = false;
+	m_dormant = 0;
 	m_hBitmapDC = NULL;
 	//m_hBitmap = NULL;
 	m_hPalette = NULL;
@@ -497,6 +486,8 @@ void ClientConnection::Init(VNCviewerApp *pApp)
 	m_hPopupMenuClipboardFormats = NULL;
 
 	m_keepalive_timer = 0;
+	m_idle_timer = 0;
+	m_idle_time = 5000;
 	m_emulate3ButtonsTimer = 0;
 	// adzm 2010-09
 	m_flushMouseMoveTimer = 0;
@@ -842,6 +833,8 @@ void ClientConnection::CreateButtons(BOOL mini,BOOL ultra)
 		// new color
 		buttonmap=IDB_BITMAPl;
 		minibuttonmap=IDB_BITMAPs;
+		
+
 		if (m_remote_mouse_disable)
 					{
 						//old
@@ -920,6 +913,7 @@ void ClientConnection::CreateButtons(BOOL mini,BOOL ultra)
         ::SetWindowPos(m_hwndTT, HWND_TOPMOST,0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
 		DWORD buttonWidth = LOWORD(SendMessage(m_hwndTB,TB_GETBUTTONSIZE,(WPARAM)0,(LPARAM)0));
 		DWORD buttonHeight = HIWORD(SendMessage(m_hwndTB,TB_GETBUTTONSIZE,(WPARAM)0,(LPARAM)0));
+				
 
 		for (row = 0; row < 1 ; row++ )
 			for (col = 0; col < nr_buttons; col++) {
@@ -1125,6 +1119,8 @@ void ClientConnection::GTGBS_CreateToolbar()
 	}
 	//wndclass.hbrBackground	= (HBRUSH) GetStockObject(BLACK_BRUSH);
 	wndclass.hbrBackground	=   (HBRUSH)(COLOR_BTNFACE+1);
+	wndclass.hbrBackground = CreateSolidBrush(RGB(45, 108, 202));
+	
     wndclass.lpszMenuName	= (const TCHAR *) NULL;
 	wndclass.lpszClassName	= VWR_WND_CLASS_NAME;
 
@@ -1156,6 +1152,7 @@ void ClientConnection::GTGBS_CreateToolbar()
 	else
 		CreateButtons(true,m_fServerKnowsFileTransfer);
 	//////////////////////////////////////////////////
+	/*
 	RECT r;
 
 	GetClientRect(m_hwndTBwin,&r);
@@ -1183,6 +1180,7 @@ void ClientConnection::GTGBS_CreateToolbar()
 	SelectObject(hdcBits,hbrOld);
 	DeleteDC(hdcBits);
 	ReleaseDC(m_TrafficMonitor,hdc);
+	*/
 
 	///////////////////////////////////////////////////
 /*	m_logo_wnd = CreateWindow(
@@ -1430,7 +1428,7 @@ void ClientConnection::WatchClipboard()
 	//m_initialClipboardSeen = false;
 	m_settingClipboardViewer = true;
 	m_hwndNextViewer = SetClipboardViewer(m_hwndcn);
-	vnclog.Print(6, "SetClipboardViewer to 0x%08x; next is 0x%08x. Last error 0x%08x", m_hwndcn, m_hwndNextViewer, GetLastError());
+	vnclog.Print(3, "SetClipboardViewer to 0x%08x; next is 0x%08x. Last error 0x%08x", m_hwndcn, m_hwndNextViewer, GetLastError());
 	m_settingClipboardViewer = false;
 #endif
 }
@@ -1586,7 +1584,7 @@ void ClientConnection::SetDSMPluginStuff()
 			if (strlen(m_clearPasswd) == 0) // Possibly set using -password command line
 			{
 				AuthDialog ad;
-				if (ad.DoDialog(false))
+				if (ad.DoDialog(false,m_host,m_port))
 				{
 					strncpy(m_clearPasswd, ad.m_passwd,254);
 				}
@@ -1936,20 +1934,20 @@ void ClientConnection::NegotiateProtocolVersion()
 		if (!Pressed_Cancel)
 		{
 		if (m_fUsePlugin && m_pIntegratedPluginInterface == NULL)
-			throw WarningException("Connection failed - Error reading Protocol Version\r\n\r\n"
-									"Possible causes:\r\n"
-									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- The selected DSMPlugin is not compatible with the one running on the Server\r\n"
-									"- The selected DSMPlugin is not correctly configured (also possibly on the Server)\r\n"
-									"- The password you've possibly entered is incorrect\r\n"
-									"- Another viewer using a DSMPlugin is already connected to the Server (more than one is forbidden)\r\n"
+			throw WarningException("연결실패 - 프로토콜 버전 분석중 에러\r\n\r\n"
+									"가능한 원인:\r\n"
+									"- 원격지에 사용하는 플러그인 선택을 안해서 생긴 오류\r\n"
+									"- 선택된 플러그인이 원격지 플러그인 버전과 달라서 생긴 오류r\r\n"
+									"- 선택된 플러그인이 설정된 플러그인과 달라서(원격지에서 발생한 문제일수도 있음)\r\n"
+									"- 패스워드가 달라서 생긴 문제\r\n"
+									"- 플러그인을 사용하는 다른 원격사용자가 이미 서버에 접속되어있다 (하나 이상의 금지)\r\n"
 									,1003
 									);
 		else
-			throw WarningException("Connection failed - End of Stream\r\n\r\n"
-									"Possible causes:\r\r"
-									"- Another user is already listening on this ID\r\n"
-									"- Bad connection\r\n",1004
+			throw WarningException("연결실패 - 원격화면 정보를 더이상 받지 못함\r\n\r\n"
+									"가능한 원인:\r\r"
+									"- 다른 사용자가 이미 해당 연결을 대기중에 있습니다.\r\n"
+									"- 잘못된 연결일수 있습니다.\r\n",1004
 									);
 		}
 		throw QuietException(c.str());
@@ -1962,21 +1960,21 @@ void ClientConnection::NegotiateProtocolVersion()
 		if (!Pressed_Cancel)
 		{
 		if (m_fUsePlugin && m_pIntegratedPluginInterface == NULL)
-			throw WarningException("Connection failed - Error reading Protocol Version\r\n\n\r"
-									"Possible causes:\r\n"
-									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- The selected DSMPlugin is not compatible with the one running on the Server\r\n"
-									"- The selected DSMPlugin is not correctly configured (also possibly on the Server)\r\n"
-									"- The password you've possibly entered is incorrect\r\n"
-									"- Another viewer using a DSMPlugin is already connected to the Server (more than one is forbidden)\r\n"
-									,1003
+			throw WarningException("연결실패 - 프로토콜 버전 분석중 에러\r\n\r\n"
+									"가능한 원인:\r\n"
+									"- 원격지에 사용하는 플러그인 선택을 안해서 생긴 오류\r\n"
+									"- 선택된 플러그인이 원격지 플러그인 버전과 달라서 생긴 오류r\r\n"
+									"- 선택된 플러그인이 설정된 플러그인과 달라서(원격지에서 발생한 문제일수도 있음)\r\n"
+									"- 패스워드가 달라서 생긴 문제\r\n"
+									"- 플러그인을 사용하는 다른 원격사용자가 이미 서버에 접속되어있다 (하나 이상의 금지)\r\n"
+									, 1003
 									);
 		else
-			throw WarningException("Connection failed - Error reading Protocol Version\r\n\r\n"
-									"Possible causes:\r\n"
+			throw WarningException("연결실패 - 프로토콜 버전 분석중 에러\r\n\r\n"
+									"가능한 원인:\r\n"
 									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- Viewer and Server are not compatible (they use different RFB protocols)\r\n"
-									"- Bad connection\r\n",1004
+									"- 관리자 원격버전과 원격지에 원격버전이 달라서 생긴문제 (다른 RFB 프로토콜을 사용중일수 있습니다.)\r\n"
+									"- 잘못된 연결일 수 있습니다.\r\n",1004
 									);
 		}
 
@@ -1991,7 +1989,7 @@ void ClientConnection::NegotiateProtocolVersion()
 	if (m_fUsePlugin && fNotEncrypted && !m_pIntegratedPluginInterface) {
 		//adzm 2010-05-12
 		if (m_opts.m_fRequireEncryption) {
-			throw WarningException("The insecure connection was refused.");
+			throw WarningException("연결이 안전하지않아 연결이 거부되었습니다.");
 		}
 		else
 		{
@@ -2011,10 +2009,10 @@ void ClientConnection::NegotiateProtocolVersion()
 			{
 				//adzm 2009-07-19 - Auto-accept the connection if it is unencrypted if that option is specified
 
-				int returnvalue=MessageBox(m_hwndMain, "You have specified an encryption plugin, however this connection is unencrypted! Do you want to continue?", "Accept insecure connection", MB_YESNO | MB_ICONEXCLAMATION | MB_TOPMOST);
+				int returnvalue=MessageBox(m_hwndMain, "암호화 플러그인을 사용중이십니다. 그러나 현재 연결이 암호화되지 않은 상태입니다! 계속 하시겠습니까?", "안전하지 않는 연결 수락", MB_YESNO | MB_ICONEXCLAMATION | MB_TOPMOST);
 				if (returnvalue==IDNO)
 				{
-					throw WarningException("You refused the insecure connection.");
+					throw WarningException("연결을 거부했습니다.");
 				}
 			}
 		}
@@ -2035,20 +2033,20 @@ void ClientConnection::NegotiateProtocolVersion()
 	{
 		SetEvent(KillEvent);
 		if (m_fUsePlugin && m_pIntegratedPluginInterface == NULL)
-			throw WarningException("Connection failed - Invalid protocol !\r\n\r\n"
-									"Possible causes:\r\r"
-									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- The selected DSMPlugin is not compatible with the one running on the Server\r\n"
-									"- The selected DSMPlugin is not correctly configured (also possibly on the Server)\r\n"
-									"- The password you've possibly entered is incorrect\r\n"
-									"- Another viewer using a DSMPlugin is already connected to the Server (more than one is forbidden)\r\n"
+			throw WarningException("연결 실패 - 잘못된 프로토콜입니다!\r\n\r\n"
+									"가능한 원인:\r\n"
+									"- 원격지에 사용하는 플러그인 선택을 안해서 생긴 오류\r\n"
+									"- 선택된 플러그인이 원격지 플러그인 버전과 달라서 생긴 오류r\r\n"
+									"- 선택된 플러그인이 설정된 플러그인과 달라서(원격지에서 발생한 문제일수도 있음)\r\n"
+									"- 패스워드가 달라서 생긴 문제\r\n"
+									"- 플러그인을 사용하는 다른 원격사용자가 이미 서버에 접속되어있다 (하나 이상의 금지)\r\n"
 
 									);
 		else
-			throw WarningException("Connection failed - Invalid protocol !\r\n\r\n"
-									"Possible causes:\r\r"
-									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- Viewer and Server are not compatible (they use different RFB protocols)\r\n"
+			throw WarningException("연결 실패 - 잘못된 프로토콜입니다 !\r\n\r\n"
+									"가능한 원인:\r\r"
+									"- 원격지에 사용하는 플러그인 선택을 안해서 생긴 오류\r\n"
+									"- 선택된 플러그인이 원격지 플러그인 버전과 달라서 생긴 오류 (RFB 프로토콜 확인필요)\r\n"
 									);
     }
 
@@ -2118,7 +2116,7 @@ void ClientConnection::NegotiateProtocolVersion()
 		//block
 		if (size<0 || size >1024)
 		{
-			throw WarningException("Buffer too big, ");
+			throw WarningException("버퍼가 너무 큽니다, ");
 			if (size<0) size=0;
 			if (size>1024) size=1024;
 		}
@@ -2128,12 +2126,12 @@ void ClientConnection::NegotiateProtocolVersion()
 
 		//adzm 2009-06-21 - auto-accept if specified
 		if (!m_opts.m_fAutoAcceptIncoming) {
-			int returnvalue=MessageBox(m_hwndMain,   mytext,"Accept Incoming SC Connection", MB_YESNO |  MB_TOPMOST);
+			int returnvalue=MessageBox(m_hwndMain,   mytext,"연결 수락", MB_YESNO |  MB_TOPMOST);
 			if (returnvalue==IDNO)
 			{
 				int nummer=0;
 				WriteExact((char *)&nummer,sizeof(int));
-				throw WarningException("You refused the connection");
+				throw WarningException("연결이 거부되었습니다.");
 			}
 			else
 			{
@@ -2174,20 +2172,20 @@ void ClientConnection::NegotiateProxy()
 		vnclog.Print(0, _T("Error reading protocol version: %s\n"),
                           c.m_info);
 		if (m_fUsePlugin)
-			throw WarningException("Proxy Connection failed - Error reading Protocol Version\r\n\n\r"
-									"Possible causes:\r\r"
-									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- The selected DSMPlugin is not compatible with the one running on the Server\r\n"
-									"- The selected DSMPlugin is not correctly configured (also possibly on the Server)\r\n"
-									"- The password you've possibly entered is incorrect\r\n"
-									"- Another viewer using a DSMPlugin is already connected to the Server (more than one is forbidden)\r\n"
+			throw WarningException("프록시 연결이 실패했습니다 - 프로토콜 버전 조회중 에러발생\r\n\n\r"
+						"가능한 원인:\r\n"
+						"- 원격지에 사용하는 플러그인 선택을 안해서 생긴 오류\r\n"
+						"- 선택된 플러그인이 원격지 플러그인 버전과 달라서 생긴 오류r\r\n"
+						"- 선택된 플러그인이 설정된 플러그인과 달라서(원격지에서 발생한 문제일수도 있음)\r\n"
+						"- 패스워드가 달라서 생긴 문제\r\n"
+						"- 플러그인을 사용하는 다른 원격사용자가 이미 서버에 접속되어있다 (하나 이상의 금지)\r\n"
 									);
 		else
-			throw WarningException("Proxy Connection failed - Error reading Protocol Version\r\n\n\r"
-									"Possible causes:\r\r"
-									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- Viewer and Server are not compatible (they use different RFB protocoles)\r\n"
-									"- Bad connection\r\n"
+			throw WarningException("프록시 연결이 실패했습니다 - 프로토콜 버전 조회중 에러발생\r\n\n\r"
+									"가능한 원인:\r\r"
+									"- 원격지에 사용하는 플러그인 선택을 안해서 생긴 오류\r\n"
+									"- 선택된 플러그인이 원격지 플러그인 버전과 달라서 생긴 오류 (RFB 프로토콜 확인필요)\r\n"
+									"- 잘못된 연결입니다.\r\n"
 									);
 
 		throw QuietException(c.m_info);
@@ -2209,19 +2207,19 @@ void ClientConnection::NegotiateProxy()
 	if (sscanf(pv,rfbProtocolVersionFormat,&m_majorVersion,&m_minorVersion) != 2)
 	{
 		if (m_fUsePlugin)
-			throw WarningException("Proxy Connection failed - Invalid protocol !\r\n\r\n"
-									"Possible causes:\r\r"
-									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- The selected DSMPlugin is not compatible with the one running on the Server\r\n"
-									"- The selected DSMPlugin is not correctly configured (also possibly on the Server)\r\n"
-									"- The password you've possibly entered is incorrect\r\n"
-									"- Another viewer using a DSMPlugin is already connected to the Server (more than one is forbidden)\r\n"
+			throw WarningException("프록시 연결 실패 - 잘못된 프로토콜입니다.. !\r\n\r\n"
+			"가능한 원인:\r\n"
+			"- 원격지에 사용하는 플러그인 선택을 안해서 생긴 오류\r\n"
+			"- 선택된 플러그인이 원격지 플러그인 버전과 달라서 생긴 오류r\r\n"
+			"- 선택된 플러그인이 설정된 플러그인과 달라서(원격지에서 발생한 문제일수도 있음)\r\n"
+			"- 패스워드가 달라서 생긴 문제\r\n"
+			"- 플러그인을 사용하는 다른 원격사용자가 이미 서버에 접속되어있다 (하나 이상의 금지)\r\n"
 									);
 		else
-			throw WarningException("Proxy Connection failed - Invalid protocol !\r\n\r\n"
-									"Possible causes:\r\r"
-									"- You've forgotten to select a DSMPlugin and the Server uses a DSMPlugin\r\n"
-									"- Viewer and Server are not compatible (they use different RFB protocols)\r\n"
+			throw WarningException("프록시 연결 실패 - 잘못된 프로토콜입니다.. !\r\n\r\n"
+			"가능한 원인:\r\r"
+			"- 원격지에 사용하는 플러그인 선택을 안해서 생긴 오류\r\n"
+			"- 선택된 플러그인이 원격지 플러그인 버전과 달라서 생긴 오류 (RFB 프로토콜 확인필요)\r\n"
 									);
     }
 
@@ -2316,7 +2314,7 @@ void ClientConnection::Authenticate(std::vector<CARD32>& current_auth)
 			}
 
 			if (authScheme == rfbInvalidAuth) {
-				throw WarningException("No supported authentication methods!");
+				throw WarningException("지원 가능한 인증방법이 아닙니다.!");
 			}
 
 			CARD8 authSchemeMsg = (CARD8)authScheme;
@@ -2346,7 +2344,7 @@ void ClientConnection::AuthenticateServer(CARD32 authScheme, std::vector<CARD32>
 	{
 		//adzm 2010-05-12
 		if (m_opts.m_fRequireEncryption) {
-			throw WarningException("The insecure connection was refused.");
+			throw WarningException("안전하지 않은 연결이어서 연결이 거부 되었습니다.");
 		}
 		else
 		{
@@ -2365,10 +2363,10 @@ void ClientConnection::AuthenticateServer(CARD32 authScheme, std::vector<CARD32>
 
 			//adzm 2009-07-19 - Auto-accept the connection if it is unencrypted if that option is specified
 			if (!m_opts.m_fAutoAcceptNoDSM) {
-				int returnvalue=MessageBox(m_hwndMain, "You have specified an encryption plugin, however this connection is unencrypted! Do you want to continue?", "Accept insecure connection", MB_YESNO | MB_ICONEXCLAMATION | MB_TOPMOST);
+				int returnvalue=MessageBox(m_hwndMain, "암호화 플러그인을 사용중이십니다. 그러나 현재 연결이 암호화되지 않은 상태입니다! 계속 하시겠습니까?", "안전하지 않는 연결 수락", MB_YESNO | MB_ICONEXCLAMATION | MB_TOPMOST);
 				if (returnvalue==IDNO)
 				{
-					throw WarningException("You refused the insecure connection.");
+					throw WarningException("연결을 거부하셨습니다.");
 				}
 			}
 		}
@@ -2383,14 +2381,14 @@ void ClientConnection::AuthenticateServer(CARD32 authScheme, std::vector<CARD32>
 	case rfbUltraVNC_SecureVNCPluginAuth_new:
 		if (bSecureVNCPluginActive) {
 			vnclog.Print(0, _T("Cannot layer multiple SecureVNC plugin authentication schemes\n"), authScheme);
-			throw WarningException("Cannot layer multiple SecureVNC plugin authentication schemes\n");
+			throw WarningException("여러 SecureVNC 플러그인 인증 체계를 인식 할 수 없습니다\n");
 		}
 		AuthSecureVNCPlugin();
 		break;
 	case rfbUltraVNC_SecureVNCPluginAuth:
 		if (bSecureVNCPluginActive) {
 			vnclog.Print(0, _T("Cannot layer multiple SecureVNC plugin authentication schemes\n"), authScheme);
-			throw WarningException("Cannot layer multiple SecureVNC plugin authentication schemes\n");
+			throw WarningException("여러 SecureVNC 플러그인 인증 체계를 인식 할 수 없습니다\n");
 		}
 		AuthSecureVNCPlugin_old();
 		break;
@@ -2608,7 +2606,7 @@ void ClientConnection::AuthSecureVNCPlugin()
 				}
 				else
 				{
-					if (ad.DoDialog(false))
+					if (ad.DoDialog(false,m_host,m_port))
 						{
 							strncpy(passwd, ad.m_passwd,254);
 							if (!bPassphraseRequired && strlen(passwd) > 8) {
@@ -2625,6 +2623,7 @@ void ClientConnection::AuthSecureVNCPlugin()
 
 				WriteExact((char*)&lengt, sizeof(lengt));
 				WriteExact((char*)passwd, lengt);
+				vncEncryptPasswd(m_encPasswd, passwd);
 			}
 
 			m_pIntegratedPluginInterface->FreeMemory(pResponseData);
@@ -2813,7 +2812,7 @@ void ClientConnection::AuthMsLogonII()
 	{
 	AuthDialog ad;
 	// adzm 2010-10 - RFB3.8 - the 'mslogon' param woudl always be true here
-	if (ad.DoDialog(true, true)) {
+	if (ad.DoDialog(true, m_host, m_port, true)) {
 #ifndef UNDER_CE
 		strncpy(passwd, ad.m_passwd, 64);
 		strncpy(user, ad.m_user, 254);
@@ -2841,7 +2840,7 @@ void ClientConnection::AuthMsLogonI()
 {
 	if (!m_ms_logon_I_legacy) {
 		vnclog.Print(0, _T("AuthMsLogonI should not be called!\n"));
-		throw WarningException("AuthMsLogonI should not be called!\n");
+		throw WarningException("MsLogon은 호출 할 수 없습니다!\n");
 	}
 
     CARD8 challenge[CHALLENGESIZE];
@@ -2897,7 +2896,7 @@ void ClientConnection::AuthMsLogonI()
 	{
 		AuthDialog ad;
 		///////////////ppppppppppppppppppppppppppppppppppppppppp // adzm 2010-10 - what?
-		if (ad.DoDialog(true))
+		if (ad.DoDialog(true,m_host, m_port))
 		{
 //					flash = new BmpFlasher;
 			strncpy(passwd, ad.m_passwd,254);
@@ -2964,7 +2963,7 @@ void ClientConnection::AuthVnc()
 		/* if server is 3.2 we can't use the new authentication */
 		vnclog.Print(0, _T("Can't use IDEA authentication\n"));
 		MessageBox(m_hwndMain,sz_L51, sz_L52, MB_OK | MB_ICONSTOP | MB_SETFOREGROUND | MB_TOPMOST);
-		throw WarningException("Can't use IDEA authentication any more!");
+		throw WarningException("더이상 IDEA 인증을 할수 없습니다!");
 	}
 	// rdv@2002 - v1.1.x
 	char passwd[256];
@@ -2984,7 +2983,7 @@ void ClientConnection::AuthVnc()
 	else
 	{
 		AuthDialog ad;
-		if (ad.DoDialog(false))
+		if (ad.DoDialog(false, m_host, m_port))
 		{
 			strncpy(passwd, ad.m_passwd,254);
 			if (strlen(passwd) == 0)
@@ -3027,7 +3026,7 @@ void ClientConnection::AuthSCPrompt()
 	//block
 	if (size<0 || size >1024)
 	{
-		throw WarningException("Buffer too big, ");
+		throw WarningException("버퍼가 너무 큽니다, ");
 		if (size<0) size=0;
 		if (size>1024) size=1024;
 	}
@@ -3038,7 +3037,7 @@ void ClientConnection::AuthSCPrompt()
 	//adzm 2009-06-21 - auto-accept if specified
 	int accepted = 0;
 	if (!m_opts.m_fAutoAcceptIncoming) {
-		int returnvalue=MessageBox(m_hwndMain,   mytext,"Accept Incoming SC Connection", MB_YESNO |  MB_TOPMOST);
+		int returnvalue=MessageBox(m_hwndMain,   mytext,"연결 수락", MB_YESNO |  MB_TOPMOST);
 		if (returnvalue != IDNO)
 		{
 			accepted = 1;
@@ -3246,9 +3245,13 @@ void ClientConnection::SizeWindow()
 		m_winheight = min(m_fullwinheight, workheight);
 	int aa=GetSystemMetrics(SM_CXBORDER)+GetSystemMetrics(SM_CXHSCROLL);
 	int bb=tdc.monarray[1].wr-tdc.monarray[1].wl+aa;
+
+	vnclog.Print(6, "m_fullwinwidth = %d,  bb = %d\n", m_fullwinwidth, bb);
+
 	if (m_opts.m_selected_screen==0 && (m_fullwinwidth <= bb )) //fit on primary
 		// -20 for border
 	{
+		vnclog.Print(6, "SizeWindow screen is 0\n");
 		SetWindowPos(m_hwndMain, HWND_TOP,
 				tdc.monarray[1].wl + ((tdc.monarray[1].wr-tdc.monarray[1].wl)-m_winwidth) / 2,
 				tdc.monarray[1].wt + ((tdc.monarray[1].wb-tdc.monarray[1].wt)-m_winheight) / 2,
@@ -3256,7 +3259,9 @@ void ClientConnection::SizeWindow()
 	}
 	else
 	{
-	SetWindowPos(m_hwndMain, HWND_TOP,
+		vnclog.Print(6, "SizeWindow screen is set\n");
+
+		SetWindowPos(m_hwndMain, HWND_TOP,
 				workrect.left + (workwidth-m_winwidth) / 2,
 				workrect.top + (workheight-m_winheight) / 2,
 				m_winwidth, m_winheight, SWP_SHOWWINDOW);
@@ -3492,6 +3497,7 @@ void ClientConnection::SetFormatAndEncodings()
 
     encs[se->nEncodings++] = Swap32IfLE(rfbEncodingServerState);
     encs[se->nEncodings++] = Swap32IfLE(rfbEncodingEnableKeepAlive);
+	encs[se->nEncodings++] = Swap32IfLE(rfbEncodingEnableIdleTime);
     encs[se->nEncodings++] = Swap32IfLE(rfbEncodingFTProtocolVersion);
 	encs[se->nEncodings++] = Swap32IfLE(rfbEncodingpseudoSession);
 
@@ -4356,15 +4362,15 @@ void ClientConnection::ShowConnInfo()
 	TCHAR num[16];
 	_stprintf(
 		buf,
-		_T("Connected to: %s\n\r\n\r")
-		_T("Host: %s  Port: %d\n\r")
+		_T("연결된 컴퓨터: %s\n\r\n\r")
+		_T("주소: %s  포트: %d\n\r")
 		_T("%s %s  %s\n\r\n\r")
-		_T("Desktop geometry: %d x %d x %d\n\r")
-		_T("Using depth: %d\n\r")
-		_T("Line speed estimate: %d kbit/s\n")
-		_T("Current protocol version: %d.%d\n\r\n\r")
-		_T("Current keyboard name: %s\n\r\n\r")
-		_T("Using Plugin : %s - %s\n\r\n\r"), // sf@2002 - v1.1.2
+		_T("컴퓨터 해상도: %d x %d x %d\n\r")
+		_T("사용한 색 품질: %d\n\r")
+		_T("연결 속도: %d kbit/s\n")
+		_T("프로토콜 버전: %d.%d\n\r\n\r")
+		_T("현재 키보드 이름: %s\n\r\n\r")
+		_T("플러그인 사용중 : %s - %s\n\r\n\r"), // sf@2002 - v1.1.2
 		m_desktopName, m_host, m_port,
 		strcmp(m_proxyhost,"") ? m_proxyhost : "",
 		strcmp(m_proxyhost,"") ? "Port" : "",
@@ -4376,7 +4382,7 @@ void ClientConnection::ShowConnInfo()
 		kbdname,
 		m_pDSMPlugin->IsEnabled() ? m_pDSMPlugin->GetPluginName() : "",
 		m_pDSMPlugin->IsEnabled() ? m_pDSMPlugin->GetPluginVersion() : "");
-	MessageBox(m_hwndMain, buf, _T("VNC connection info"), MB_ICONINFORMATION | MB_OK | MB_SETFOREGROUND | MB_TOPMOST);
+	MessageBox(m_hwndMain, buf, _T("원격 연결 정보"), MB_ICONINFORMATION | MB_OK | MB_SETFOREGROUND | MB_TOPMOST);
 }
 
 // ********************************************************************
@@ -4697,6 +4703,7 @@ void ClientConnection::Internal_SendFullFramebufferUpdateRequest()
 					m_si.framebufferHeight, false);
 }
 
+
 void ClientConnection::Internal_SendAppropriateFramebufferUpdateRequest()
 {
 	if (m_pendingFormatChange)
@@ -4755,8 +4762,9 @@ void ClientConnection::Internal_SendAppropriateFramebufferUpdateRequest()
 	}
 	else
 	{
-		if (!m_dormant)
+		if (m_dormant!=1)
 			Internal_SendIncrementalFramebufferUpdateRequest();
+		if (m_dormant == 2) m_dormant = 1;
 	}
 }
 
@@ -5270,13 +5278,14 @@ inline void ClientConnection::ReadScreenUpdate()
 		SendAppropriateFramebufferUpdateRequest(true);
 	}
 	DeleteObject(UpdateRegion);
+	
 }
 
-void ClientConnection::SetDormant(bool newstate)
+void ClientConnection::SetDormant(int newstate)
 {
 	vnclog.Print(5, _T("%s dormant mode\n"), newstate ? _T("Entering") : _T("Leaving"));
 	m_dormant = newstate;
-	if (!m_dormant && m_running) {
+	if (m_dormant!=1 && m_running) {
 		//adzm 2010-09
 		SendIncrementalFramebufferUpdateRequest(false);
 	}
@@ -5427,6 +5436,22 @@ void ClientConnection::ReadServerState()
 			m_keepalive_timer = 0;
 		}
         break;
+
+	case rfbIdleInputTimeout:
+		m_opts.m_IdleInterval = value;		
+		vnclog.Print(1, _T("New IdleTiler interval %u"), m_opts.m_IdleInterval);
+		m_idle_timer = 1012;
+		m_idle_time = value * 1000;
+		KillTimer(m_hwndcn, m_idle_timer);
+		KillTimer(m_hwndcn, 1013);
+		if (m_opts.m_IdleInterval > 0) {
+			SetTimer(m_hwndcn, m_idle_timer, m_idle_time, NULL);			
+		}
+		else {
+			m_idle_timer = 0;
+		}
+		break;
+
     default:
         vnclog.Print(1, _T("Ignoring unsupported state %u"), state);
         break;
@@ -6813,6 +6838,7 @@ LRESULT CALLBACK ClientConnection::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, 
 								_this->m_nServerScale = _this->m_opts.m_nServerScale;
 								if (_this->m_nServerScale != nOldServerScale)
 								{
+									vnclog.Print(6, "IDC_OPTIONBUTTON call SendServerScale\n");
 									_this->SendServerScale(_this->m_nServerScale);
 								}
 								else
@@ -6820,6 +6846,7 @@ LRESULT CALLBACK ClientConnection::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, 
 									if (prev_scale_num != _this->m_opts.m_scale_num ||
 										prev_scale_den != _this->m_opts.m_scale_den)
 									{
+										vnclog.Print(6, "IDC_OPTIONBUTTON call RealiseFullScreenMode\n");
 										// Resize the window if scaling factors were changed
 										_this->SizeWindow(/*false*/);
 										InvalidateRect(hwnd, NULL, TRUE);
@@ -6838,9 +6865,11 @@ LRESULT CALLBACK ClientConnection::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, 
 							// adzm - 2010-07 - Extended clipboard
 							if ( (bOldViewOnly != _this->m_opts.m_ViewOnly) || (bOldDisableClipboard != _this->m_opts.m_DisableClipboard) )
 							{
+								vnclog.Print(6, "IDC_OPTIONBUTTON call UpdateRemoteClipboardCaps\n");
 								_this->UpdateRemoteClipboardCaps();
 
 								if (!_this->m_opts.m_ViewOnly && !_this->m_opts.m_DisableClipboard) {
+									vnclog.Print(6, "IDC_OPTIONBUTTON call UpdateRemoteClipboard\n");
 									_this->UpdateRemoteClipboard(); // update the clipboard if we are no longer view only and the clipboard is enabled
 								}
 							}
@@ -7085,6 +7114,8 @@ LRESULT CALLBACK ClientConnection::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, 
 					case ID_256COLORS:
 						// if (!_this->m_opts.m_Use8Bit)
 						{
+							vnclog.Print(6, "ID_256COLORS call\n");
+
 							_this->m_opts.m_Use8Bit = rfbPF256Colors; //true;
 							_this->m_pendingFormatChange = true;
 							InvalidateRect(hwnd, NULL, TRUE);
@@ -7182,7 +7213,7 @@ LRESULT CALLBACK ClientConnection::WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, 
 								InvalidateRect(hwnd, NULL, TRUE);
 								_this->SetFullScreenMode(false);
 								_this->m_pendingFormatChange = true;
-							}*/
+							}*/							
 							return 0;
 						}
 
@@ -8078,13 +8109,13 @@ LRESULT CALLBACK ClientConnection::WndProchwnd(HWND hwnd, UINT iMsg, WPARAM wPar
 	//	HWND parent;
     ClientConnection *_this = helper::SafeGetWindowUserData<ClientConnection>(hwnd);
 
-	if (_this == NULL) return DefWindowProc(hwnd, iMsg, wParam, lParam);
+	if (_this == NULL && iMsg != WM_CREATE)
+		return DefWindowProc(hwnd, iMsg, wParam, lParam);
 	switch (iMsg)
 			{
 			case WM_CREATE:
 				_this = (ClientConnection*)((CREATESTRUCT*)lParam)->lpCreateParams;
-				helper::SafeSetWindowUserData(hwnd, (LONG_PTR)_this);
-				SetTimer(_this->m_hwndcn,3335, 1000, NULL);
+				if (_this == NULL) return 0;
 				return 0;
 
 			case WM_REQUESTUPDATE:
@@ -8135,6 +8166,15 @@ LRESULT CALLBACK ClientConnection::WndProchwnd(HWND hwnd, UINT iMsg, WPARAM wPar
 							_this->FlushWriteQueue();
 						}
 					}
+					else if (wParam == _this->m_idle_timer) {
+						if (_this->m_idle_time<60000) 
+							SetTimer(_this->m_hwndcn, 1013, 5000, NULL);
+						else 
+							PostMessage(_this->m_hwndMain, WM_CLOSE, 0, 0);
+					}
+					else if (wParam == 1013) {
+						_this->SetDormant(2);
+					}
 				}
 				return 0;
 
@@ -8145,6 +8185,7 @@ LRESULT CALLBACK ClientConnection::WndProchwnd(HWND hwnd, UINT iMsg, WPARAM wPar
 					_this->m_SWpoint.x=LOWORD(lParam);
 					_this->m_SWpoint.y=HIWORD(lParam);
 					_this->SendSW(_this->m_SWpoint.x,_this->m_SWpoint.y);
+					if (_this->m_opts.m_IdleInterval > 0) { KillTimer(_this->m_hwndcn, 1013);SetTimer(hwnd, _this->m_idle_timer, _this->m_idle_time, NULL); _this->SetDormant(false); }
 					return 0;
 				}
 			case WM_MBUTTONDOWN:
@@ -8153,6 +8194,7 @@ LRESULT CALLBACK ClientConnection::WndProchwnd(HWND hwnd, UINT iMsg, WPARAM wPar
 			case WM_RBUTTONUP:
 			case WM_MOUSEMOVE:
 				{
+					if (_this->m_opts.m_IdleInterval > 0) { KillTimer(_this->m_hwndcn, 1013);SetTimer(hwnd, _this->m_idle_timer, _this->m_idle_time, NULL); _this->SetDormant(false); }
 					if (_this->m_SWselect) {return 0;}
 					if (!_this->m_running) return 0;
 //					if (GetFocus() != hwnd) return 0;
@@ -8177,10 +8219,10 @@ LRESULT CALLBACK ClientConnection::WndProchwnd(HWND hwnd, UINT iMsg, WPARAM wPar
 			case WM_KEYUP:
 			case WM_SYSKEYDOWN:
 			case WM_SYSKEYUP:
-				{
+				{					
+					if (_this->m_opts.m_IdleInterval > 0) {KillTimer(_this->m_hwndcn, 1013);SetTimer(hwnd, _this->m_idle_timer, _this->m_idle_time, NULL); _this->SetDormant(false);}
 					if (!_this->m_running) return 0;
 					if ( _this->m_opts.m_ViewOnly) return 0;
-					//by jcpark : 한영 전환 해결
 					if (wParam == VK_PROCESSKEY) wParam = ImmGetVirtualKey(_this->m_hwndcn);
 					_this->ProcessKeyEvent((int) wParam, (DWORD) lParam);
 					//adzm 2010-09
@@ -8329,10 +8371,11 @@ LRESULT CALLBACK ClientConnection::WndProchwnd(HWND hwnd, UINT iMsg, WPARAM wPar
 					vnclog.Print(6, _T("WndProchwnd ChangeClipboardChain hwnd 0x%08x / m_hwndcn 0x%08x, 0x%08x (%li)\n"), hwnd, _this->m_hwndcn, _this->m_hwndNextViewer, res);
 				}
 				#endif
+				KillTimer(_this->m_hwndcn, _this->m_idle_timer);
+				KillTimer(_this->m_hwndcn, 1013);
 				if (_this->m_waitingOnEmulateTimer)
 				{
 				KillTimer(_this->m_hwndcn, _this->m_emulate3ButtonsTimer);
-				KillTimer(_this->m_hwndcn, 3335);
 				_this->m_waitingOnEmulateTimer = false;
 				}
 				/*
@@ -8778,22 +8821,7 @@ ClientConnection::PendingMouseMove::PendingMouseMove()
 	bValid(false),
 	dwMinimumMouseMoveInterval(0) // changed to 0 from 150; need to have an interface for this
 {
-	//adzm 2010-10 - This is in the standard options dialog now.
-	/*
-	HKEY hRegKey;
-	DWORD dwPreferredMinimumMouseMoveInterval = 0;
-	if ( RegCreateKey(HKEY_CURRENT_USER, SETTINGS_KEY_NAME, &hRegKey)  != ERROR_SUCCESS ) {
-        hRegKey = NULL;
-	} else {
-		DWORD valsize = sizeof(dwPreferredMinimumMouseMoveInterval);
-		DWORD valtype = REG_DWORD;
-		if ( RegQueryValueEx( hRegKey,  "MinMouseMove", NULL, &valtype,
-			(LPBYTE) &dwPreferredMinimumMouseMoveInterval, &valsize) == ERROR_SUCCESS) {
-            dwMinimumMouseMoveInterval = dwPreferredMinimumMouseMoveInterval;
-		}
-		RegCloseKey(hRegKey);
-	}
-	*/
+	
 }
 
 // adzm 2010-09 - Notify streaming DSM plugin support
@@ -8843,7 +8871,7 @@ BOOL CALLBACK DialogProc(HWND hWnd, UINT Message, WPARAM wParam, LPARAM lParam)
 
 				  if(iSlected==-1)
 				  {
-                    MessageBox(hWnd,"No Items in ListView","Error",MB_OK|MB_ICONINFORMATION);
+                    MessageBox(hWnd,"항목이 없습니다.","Error",MB_OK|MB_ICONINFORMATION);
 					break;
 				  }
 
@@ -8862,7 +8890,7 @@ BOOL CALLBACK DialogProc(HWND hWnd, UINT Message, WPARAM wParam, LPARAM lParam)
 
 					if(iSelect==-1)
 					{
-                      MessageBox(hWnd,"No Vnc server selected","Error",MB_OK|MB_ICONINFORMATION);
+                      MessageBox(hWnd,"원격지 선택이 안되었습니다.","Error",MB_OK|MB_ICONINFORMATION);
 					  break;
 					}
 					flag=1;

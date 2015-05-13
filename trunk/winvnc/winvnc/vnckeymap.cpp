@@ -457,8 +457,7 @@ public:
   void keyEvent(rdr::U32 keysym, bool down, bool jap)
   {
 	  vnclog.Print(LL_INTWARN, " keysym 0x%x",keysym);
-	
-	 if (keysym>=XK_dead_grave && keysym <=XK_dead_belowdot)// && down)
+	if (keysym>=XK_dead_grave && keysym <=XK_dead_belowdot)// && down)
 	{
 		keysymDead=keysym;
 		vnclog.Print(LL_INTWARN, " ************** DEAD KEY");
@@ -466,7 +465,7 @@ public:
 		//Record dead key
 		return;
 	}
-	
+
     if ((keysym >= 32 && keysym <= 126) ||
         (keysym >= 160 && keysym <= 255))
     {

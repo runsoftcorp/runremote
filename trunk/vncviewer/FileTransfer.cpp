@@ -976,7 +976,7 @@ void FileTransfer::AddFileToFileList(HWND hWnd, int nListId, WIN32_FIND_DATA& fd
 		Item.mask = LVIF_TEXT;
 		Item.iItem = nItem;
 		Item.iSubItem = 1;
-		Item.pszText = sz_H31;
+		Item.pszText = "Folder";
 		ListView_SetItem(hWndList, &Item);
 
 	}
